@@ -1,0 +1,9 @@
+C:\Users\JakubWitczak\documents\visual studio 2015\Projects\ShippingPlatform\ShippingPlatform\bin\Debug\ShippingPlatform.dll.config
+C:\Users\JakubWitczak\documents\visual studio 2015\Projects\ShippingPlatform\ShippingPlatform\bin\Debug\ShippingPlatform.dll
+C:\Users\JakubWitczak\documents\visual studio 2015\Projects\ShippingPlatform\ShippingPlatform\bin\Debug\ShippingPlatform.pdb
+C:\Users\JakubWitczak\documents\visual studio 2015\Projects\ShippingPlatform\ShippingPlatform\bin\Debug\MySql.Data.dll
+C:\Users\JakubWitczak\documents\visual studio 2015\Projects\ShippingPlatform\ShippingPlatform\bin\Debug\Newtonsoft.Json.dll
+C:\Users\JakubWitczak\documents\visual studio 2015\Projects\ShippingPlatform\ShippingPlatform\bin\Debug\Newtonsoft.Json.xml
+C:\Users\JakubWitczak\documents\visual studio 2015\Projects\ShippingPlatform\ShippingPlatform\obj\Debug\ShippingPlatform.csprojResolveAssemblyReference.cache
+C:\Users\JakubWitczak\documents\visual studio 2015\Projects\ShippingPlatform\ShippingPlatform\obj\Debug\ShippingPlatform.dll
+C:\Users\JakubWitczak\documents\visual studio 2015\Projects\ShippingPlatform\ShippingPlatform\obj\Debug\ShippingPlatform.pdb

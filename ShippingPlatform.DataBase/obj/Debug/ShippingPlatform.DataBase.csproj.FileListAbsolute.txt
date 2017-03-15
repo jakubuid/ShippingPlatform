@@ -1,0 +1,8 @@
+H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\ShippingPlatform.DataBase.dll
+H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\ShippingPlatform.DataBase.pdb
+H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\Dapper.dll
+H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\FluentMapping.dll
+H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\Dapper.xml
+H:\ShippingPlatform\ShippingPlatform.DataBase\obj\Debug\ShippingPlatform.DataBase.csprojResolveAssemblyReference.cache
+H:\ShippingPlatform\ShippingPlatform.DataBase\obj\Debug\ShippingPlatform.DataBase.dll
+H:\ShippingPlatform\ShippingPlatform.DataBase\obj\Debug\ShippingPlatform.DataBase.pdb
