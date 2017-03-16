@@ -3,22 +3,28 @@ using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using static Dapper.SqlMapper;
 
 namespace ShippingPlatform.DataBase
 {
     class DataBaseService
     {
-        public string GetConnectionString()
+        public static string GetConnectionString()
         {
-            return "test";
+            MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
+            builder.Server = Properties.Settings.Default.Server;
+            builder.Password = Properties.Settings.Default.Password;
+            builder.Database = Properties.Settings.Default.DataBase;
+            builder.UserID = Properties.Settings.Default.Username;
+            return builder.GetConnectionString(true);
         }
-        //public static IDbConnection GetConnection()
-        //{
-        //    using (IDbConnection connection = new MySqlConnection())
-        //    {
-
-        //    }
-        //}
+        public static void GetConnection()
+        {
+            using (IDbConnection connection = new MySqlConnection(GetConnectionString()))
+            {
+                connection.Open();
+            }
+        }
         public Client GetClient(IDbConnection connection, int searchId)
         {
             return connection.Query<Client>(
