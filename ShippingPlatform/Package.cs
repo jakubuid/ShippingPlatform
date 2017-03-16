@@ -2,7 +2,7 @@
 
 namespace ShippingPlatform
 {
-    class Package
+    public class Package
     {
         public int id { get; set; }
         public double height { get; set; }

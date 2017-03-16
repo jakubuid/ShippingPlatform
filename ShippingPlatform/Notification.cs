@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace ShippingPlatform
 {
-    class Notification
+    public class Notification
     {
         private List<String> attachements = new List<string>();
         public int id { get; set; }
-        public String clienEmail { get; set; }
+        public String clientEmail { get; set; }
         public String recipientEmail { get; set; }
         public String message{ get; set; }
         public String subject { get; set; }

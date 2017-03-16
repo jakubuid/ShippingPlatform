@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ShippingPlatform
 {
-    class Order
+    public class Order
     {
         private List<Route> routes = new List<Route>();
         private List<Package> packages = new List<Package>();

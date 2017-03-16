@@ -2,7 +2,7 @@
 
 namespace ShippingPlatform
 {
-    class LogisticCenter
+    public class LogisticCenter
     {
         public int id { get; set; }
         public String name { get; set; }

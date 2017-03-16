@@ -2,7 +2,7 @@
 
 namespace ShippingPlatform
 {
-     class Client
+     public class Client
     {
         public int id { get; set; }
         public Address clientAddress { get; set; }

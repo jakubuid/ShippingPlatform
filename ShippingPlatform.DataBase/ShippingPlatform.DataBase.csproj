@@ -85,6 +85,12 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShippingPlatform\ShippingPlatform.Model.csproj">
+      <Project>{96ddef58-1925-4cd0-8c54-60839fd3f312}</Project>
+      <Name>ShippingPlatform.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

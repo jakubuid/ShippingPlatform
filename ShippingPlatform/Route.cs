@@ -2,7 +2,7 @@
 
 namespace ShippingPlatform
 {
-    class Route
+    public class Route
     {
         public int id { get; set; }
         public Address startAddress { get; set; }

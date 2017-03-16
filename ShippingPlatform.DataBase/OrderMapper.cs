@@ -10,9 +10,9 @@ namespace ShippingPlatform.DataBase
             Map(x => x.clientAddress).ToColumn("client_address");
             Map(x => x.recipientAddress).ToColumn("recipient_address");
             Map(x => x.orderNumber).ToColumn("order_number");
-            Map(x => x.createDay).ToColumn("create_day");
+            Map(x => x.createdDay).ToColumn("create_day");
             Map(x => x.pickUpDate).ToColumn("pick_up_date");
-            Map(x => x.deliveryDay).ToColumn("delivery_date");
+            Map(x => x.deliveryDate).ToColumn("delivery_date");
             Map(x => x.status).ToColumn("status");
         }
     }

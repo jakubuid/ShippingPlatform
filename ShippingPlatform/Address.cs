@@ -3,7 +3,7 @@ using Dapper.FluentMap;
 
 namespace ShippingPlatform
 {
-    class Address
+    public class Address
     {
         public int id { get; set; }
         public String country { get; set; }

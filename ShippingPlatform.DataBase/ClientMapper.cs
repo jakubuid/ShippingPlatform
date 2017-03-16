@@ -11,7 +11,7 @@ namespace ShippingPlatform.DataBase
             Map(x => x.order).ToColumn("order");
             Map(x => x.login).ToColumn("login");
             Map(x => x.password).ToColumn("password");
-            Map(x => x.address).ToColumn("address_email");
+            Map(x => x.addressEmail).ToColumn("address_email");
         }
     }
 }
