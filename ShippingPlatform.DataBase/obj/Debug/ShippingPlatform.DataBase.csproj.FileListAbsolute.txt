@@ -6,3 +6,10 @@ H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\Dapper.xml
 H:\ShippingPlatform\ShippingPlatform.DataBase\obj\Debug\ShippingPlatform.DataBase.csprojResolveAssemblyReference.cache
 H:\ShippingPlatform\ShippingPlatform.DataBase\obj\Debug\ShippingPlatform.DataBase.dll
 H:\ShippingPlatform\ShippingPlatform.DataBase\obj\Debug\ShippingPlatform.DataBase.pdb
+H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\ShippingPlatform.DataBase.dll.config
+H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\Dapper.FluentMap.dll
+H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\EntityFramework.dll
+H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\EntityFramework.SqlServer.dll
+H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\Dapper.FluentMap.xml
+H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\EntityFramework.xml
+H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\EntityFramework.SqlServer.xml

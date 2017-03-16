@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dapper.FluentMap;
 
 namespace ShippingPlatform.DataBase
 {
@@ -12,7 +13,14 @@ namespace ShippingPlatform.DataBase
 
         public static void Configure()
         {
-
+            if (isConfigured)
+            {
+                return;
+            }
+            FluentMapper.Initialize(config =>
+            {
+                
+            });
         }
     }
 }

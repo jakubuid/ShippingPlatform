@@ -5,12 +5,12 @@ namespace ShippingPlatform
 {
     class Notification
     {
-        private String clietEmail;
-        private String recipientEmail;
-        private String wessage;
-        private String subject;
         private List<String> attachements = new List<string>();
-        private DateTime timeStamp;
-        private Order order;
+        public String clienEmail { get; set; }
+        public String recipientEmail { get; set; }
+        public String message{ get; set; }
+        public String subject { get; set; }
+        public DateTime timeStamp{ get; set; }
+        public Order order { get; set; }
     }
 }

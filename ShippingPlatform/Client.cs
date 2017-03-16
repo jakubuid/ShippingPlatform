@@ -2,12 +2,12 @@
 
 namespace ShippingPlatform
 {
-    public class Client
+     class Client
     {
-        private Address clientAdress;
-        private Order order;
-        private String login;
-        private String password;
-        private String emailAddress;
+        public Address clientAddress { get; set; }
+        public Order order { get; set; }
+        public String login { get; set; }
+        public String  password{ get; set; }
+        public String addressEmail { get; set; }
     }
 }

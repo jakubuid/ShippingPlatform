@@ -5,14 +5,14 @@ namespace ShippingPlatform
 {
     class Order
     {
-        private Address recipientAddress;
-        private Address clientAddress;
-        private string orderNumber;
-        private DateTime createdDay;
-        private DateTime pickUpDate;
-        private DateTime deliveryDate;
-        private String status;
         private List<Route> routes = new List<Route>();
         private List<Package> packages = new List<Package>();
+        public Address recipientAddress { get; set; }
+        public Address clientAddress { get; set; }
+        public String orderNumber { get; set; }
+        public DateTime createdDay { get; set; }
+        public DateTime pickUpDate { get; set; }
+        public DateTime deliveryDate { get; set; }
+        public String status { get; set; }
     }
 }

@@ -4,10 +4,10 @@ namespace ShippingPlatform
 {
     class Package
     {
-        private double height;
-        private double width;
-        private double depth;
-        private double weight;
-        private String content;
+        public double height { get; set; }
+        public double width { get; set; }
+        public double depth { get; set; }
+        public double weight { get; set; }
+        public String content { get; set; }
     }
 }

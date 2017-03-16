@@ -3,20 +3,16 @@
   <Class Name="ShippingPlatform.Address">
     <Position X="9" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAQAAAAAAAAAAAAAACAAAAAAAAABCAAIAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAABCAAAAAAAAAAE=</HashCode>
       <FileName>Address.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ShippingPlatform.Client">
     <Position X="6.25" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAABAAAAAAAAAACAAAAAAAAAAAACAAAAAgAAEAA=</HashCode>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAFAAAAAAAAAAAAgAAEAA=</HashCode>
       <FileName>Client.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="order" />
-      <Field Name="clientAdress" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="ShippingPlatform.LogisticCenter">
     <Position X="12.5" Y="0.5" Width="1.5" />
@@ -24,25 +20,18 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAMIAAAAAAAAAAAAAA=</HashCode>
       <FileName>LogisticCenter.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="logisticCenterAddress" />
-      <Field Name="shippingRoute" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="ShippingPlatform.Notification">
     <Position X="1" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIAAAAABBAAAAAAAAEAACACAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <HashCode>AIAAAAABAAAAAAAAAEAACACAAAAAAAAAAAAAAAEAACA=</HashCode>
       <FileName>Notification.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="order" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="ShippingPlatform.Order">
     <Position X="3.75" Y="2.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAACAAAAAACAAARCAAACAAAAAABAAQAAAAA=</HashCode>
+      <HashCode>AAQAIAAAAAACAAAAAACAAARCAAACAAAAAABAAAAAAAA=</HashCode>
       <FileName>Order.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -59,19 +48,10 @@
   </Class>
   <Class Name="ShippingPlatform.Route">
     <Position X="9" Y="5.25" Width="1.5" />
-    <AssociationLine Name="startAddress" Type="ShippingPlatform.Address">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-1.036" Y="0.341" />
-      </MemberNameLabel>
-    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAkACIAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Route.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="endAddress" />
-      <Field Name="startAddress" />
-    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

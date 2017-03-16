@@ -9,3 +9,9 @@ H:\ShippingPlatform\ShippingPlatform\bin\Debug\Newtonsoft.Json.xml
 H:\ShippingPlatform\ShippingPlatform\obj\Debug\ShippingPlatform.Model.csprojResolveAssemblyReference.cache
 H:\ShippingPlatform\ShippingPlatform\obj\Debug\ShippingPlatform.dll
 H:\ShippingPlatform\ShippingPlatform\obj\Debug\ShippingPlatform.pdb
+H:\ShippingPlatform\ShippingPlatform\bin\Debug\Dapper.FluentMap.dll
+H:\ShippingPlatform\ShippingPlatform\bin\Debug\EntityFramework.dll
+H:\ShippingPlatform\ShippingPlatform\bin\Debug\EntityFramework.SqlServer.dll
+H:\ShippingPlatform\ShippingPlatform\bin\Debug\Dapper.FluentMap.xml
+H:\ShippingPlatform\ShippingPlatform\bin\Debug\EntityFramework.xml
+H:\ShippingPlatform\ShippingPlatform\bin\Debug\EntityFramework.SqlServer.xml

@@ -4,8 +4,8 @@ namespace ShippingPlatform
 {
     class LogisticCenter
     {
-        private String name;
-        private Address logisticCenterAddress;
-        private Route shippingRoute;
+        public String name { get; set; }
+        public Address logisticCenterAddress { get; set; }
+        public Route shippingRoute { get; set; }
     }
 }
