@@ -13,3 +13,6 @@ H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\EntityFramework.SqlServe
 H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\Dapper.FluentMap.xml
 H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\EntityFramework.xml
 H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\EntityFramework.SqlServer.xml
+H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\MySql.Data.dll
+H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\ShippingPlatform.dll
+H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\ShippingPlatform.pdb

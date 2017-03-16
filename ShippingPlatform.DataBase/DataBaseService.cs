@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -7,6 +8,17 @@ namespace ShippingPlatform.DataBase
 {
     class DataBaseService
     {
+        public string GetConnectionString()
+        {
+            return "test";
+        }
+        //public static IDbConnection GetConnection()
+        //{
+        //    using (IDbConnection connection = new MySqlConnection())
+        //    {
+
+        //    }
+        //}
         public Client GetClient(IDbConnection connection, int searchId)
         {
             return connection.Query<Client>(
