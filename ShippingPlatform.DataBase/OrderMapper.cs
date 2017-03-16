@@ -2,7 +2,7 @@
 
 namespace ShippingPlatform.DataBase
 {
-    class OrderMapper : EntityMap<Order>
+    class OrderMapper : EntityMap<Address>
     {
         public OrderMapper()
         {

@@ -12,6 +12,6 @@ namespace ShippingPlatform
         public String message{ get; set; }
         public String subject { get; set; }
         public DateTime timeStamp{ get; set; }
-        public Order order { get; set; }
+        public Address order { get; set; }
     }
 }
