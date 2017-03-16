@@ -19,7 +19,13 @@ namespace ShippingPlatform.DataBase
             }
             FluentMapper.Initialize(config =>
             {
-                
+                config.AddMap(new ClientMapper());
+                config.AddMap(new AddressMapper());
+                config.AddMap(new RouteMapper());
+                config.AddMap(new PackageMapper());
+                config.AddMap(new OrderMapper());
+                config.AddMap(new LogisticCenterMapper());
+                config.AddMap(new NotificationMapper());
             });
         }
     }
