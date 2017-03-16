@@ -28,6 +28,9 @@
       <HashCode>AIAAAAABAAAAAAgAAEAACACAAAAAAAAAAAAAAAAAAiA=</HashCode>
       <FileName>Notification.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="order" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="ShippingPlatform.Package">
     <Position X="2" Y="4.75" Width="1.5" />

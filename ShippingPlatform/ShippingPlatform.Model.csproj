@@ -68,7 +68,6 @@
     <Compile Include="Address.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="LogisticCenter.cs" />
-    <Compile Include="ModelObject.cs" />
     <Compile Include="Notification.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Package.cs" />
