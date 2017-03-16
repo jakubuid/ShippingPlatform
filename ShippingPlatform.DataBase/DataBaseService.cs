@@ -59,37 +59,37 @@ namespace ShippingPlatform.DataBase
 
         public IEnumerable<Client> GetAllClients(IDbConnection connection)
         {
-            return connection.Query<Client>("SELECT * FROM product").ToList();
+            return connection.Query<Client>("SELECT * FROM clients").ToList();
         }
 
         public IEnumerable<Package> GetAllPackages(IDbConnection connection)
         {
-            return connection.Query<Package>("SELECT * FROM product").ToList();
+            return connection.Query<Package>("SELECT * FROM packages").ToList();
         }
 
         public IEnumerable<Route> GetAllRoutes(IDbConnection connection)
         {
-            return connection.Query<Route>("SELECT * FROM product").ToList();
+            return connection.Query<Route>("SELECT * FROM routes").ToList();
         }
 
         public IEnumerable<Notification> GetAllNotifications(IDbConnection connection)
         {
-            return connection.Query<Notification>("SELECT * FROM product").ToList();
+            return connection.Query<Notification>("SELECT * FROM notifications").ToList();
         }
 
         public IEnumerable<Address> GetAllAddresses(IDbConnection connection)
         {
-            return connection.Query<Address>("SELECT * FROM product").ToList();
+            return connection.Query<Address>("SELECT * FROM addresses").ToList();
         }
 
         public IEnumerable<LogisticCenterMapper> GetAllLogisticCenters(IDbConnection connection)
         {
-            return connection.Query<LogisticCenterMapper>("SELECT * FROM product").ToList();
+            return connection.Query<LogisticCenterMapper>("SELECT * FROM logistic_centers").ToList();
         }
 
         public IEnumerable<Order> GetAllOrders(IDbConnection connection)
         {
-            return connection.Query<Order>("SELECT * FROM product").ToList();
+            return connection.Query<Order>("SELECT * FROM orders").ToList();
         }
     }
 }
