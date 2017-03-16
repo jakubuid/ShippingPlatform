@@ -11,6 +11,7 @@ namespace ShippingPlatform.DataBase
             Map(x => x.endAddress).ToColumn("end_address");
             Map(x => x.startTime).ToColumn("start_time");
             Map(x => x.endTime).ToColumn("end_time");
+            Map(x => x.orderId).ToColumn("id_order");
         }
     }
 }

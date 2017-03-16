@@ -10,5 +10,6 @@ namespace ShippingPlatform
         public double depth { get; set; }
         public double weight { get; set; }
         public String content { get; set; }
+        public int orderId { get; set; }
     }
 }
