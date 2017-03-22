@@ -7,7 +7,7 @@ using static Dapper.SqlMapper;
 
 namespace ShippingPlatform.DataBase
 {
-    class DataBaseService
+    class ConnectionProvider
     {
         public static string GetConnectionString()
         {
@@ -18,12 +18,11 @@ namespace ShippingPlatform.DataBase
             builder.UserID = Properties.Settings.Default.Username;
             return builder.GetConnectionString(true);
         }
-        public static void GetConnection()
+        public static IDbConnection GetConnection()
         {
-            using (IDbConnection connection = new MySqlConnection(GetConnectionString()))
-            {
-                connection.Open();
-            }
+            IDbConnection connection = new MySqlConnection(GetConnectionString());
+            connection.Open();
+            return connection;
         }
     }
 }

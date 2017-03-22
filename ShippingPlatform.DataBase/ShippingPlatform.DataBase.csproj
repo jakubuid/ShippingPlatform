@@ -72,7 +72,7 @@
     <Compile Include="ClientRepository.cs" />
     <Compile Include="ClientService.cs" />
     <Compile Include="DapperConfiguration.cs" />
-    <Compile Include="DataBaseService.cs" />
+    <Compile Include="ConnectionProvider.cs" />
     <Compile Include="LogisticCenterMapper.cs" />
     <Compile Include="LogisticCenterRepository.cs" />
     <Compile Include="LogisticCenterService.cs" />
