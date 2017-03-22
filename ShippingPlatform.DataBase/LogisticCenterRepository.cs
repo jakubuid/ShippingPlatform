@@ -10,7 +10,7 @@ namespace ShippingPlatform.DataBase
         public LogisticCenterMapper GetLogisticCenter(IDbConnection connection, int searchId)
         {
             return connection.Query<LogisticCenterMapper>(
-                "SELECT * FROM product WHERE id = @id",
+                "SELECT * FROM logictic_centers WHERE id_logistic_centers = @id",
                 new { id = searchId }).FirstOrDefault();
         }
 

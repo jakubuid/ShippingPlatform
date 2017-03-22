@@ -2,7 +2,7 @@
 
 namespace ShippingPlatform.DataBase
 {
-    class LogisticCenterMapper : EntityMap<LogisticCenter>
+    public class LogisticCenterMapper : EntityMap<LogisticCenter>
     {
         public LogisticCenterMapper()
         {

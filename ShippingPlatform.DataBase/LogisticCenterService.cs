@@ -3,7 +3,7 @@ using System.Data;
 
 namespace ShippingPlatform.DataBase
 {
-    class LogisticCenterService
+    public class LogisticCenterService
     {
         private LogisticCenterRepository lcRepository = new LogisticCenterRepository();
         public LogisticCenterMapper FindOneLogisticCenter(IDbConnection connection, int searchId)

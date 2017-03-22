@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,6 +51,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShippingPlatform.DataBase\ShippingPlatform.DataBase.csproj">
+      <Project>{1bd390b6-95a8-4842-afd8-1171c3cce2c1}</Project>
+      <Name>ShippingPlatform.DataBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShippingPlatform\ShippingPlatform.Model.csproj">
+      <Project>{96ddef58-1925-4cd0-8c54-60839fd3f312}</Project>
+      <Name>ShippingPlatform.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

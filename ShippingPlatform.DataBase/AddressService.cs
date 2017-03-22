@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShippingPlatform.DataBase
 {
-    class AddressService
+    public class AddressService
     {
         private AddressRepository addressRepository = new AddressRepository();
+
         public Address FindOneAddress(IDbConnection connection, int searchId)
         {
             return addressRepository.GetAddress(connection, searchId);

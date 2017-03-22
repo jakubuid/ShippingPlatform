@@ -4,7 +4,7 @@ using System.Data;
 
 namespace ShippingPlatform.DataBase
 {
-    class NotificationService
+    public class NotificationService
     {
         private NotificationRepository notificationRepo = new NotificationRepository();
         public Notification FindOneNotification(IDbConnection connection, int searchId)

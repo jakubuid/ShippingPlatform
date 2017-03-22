@@ -1,0 +1,15 @@
+H:\ShippingPlatform\ConnectionTest\obj\Debug\ConnectionTest.csprojResolveAssemblyReference.cache
+H:\ShippingPlatform\ConnectionTest\bin\Debug\ConnectionTest.exe.config
+H:\ShippingPlatform\ConnectionTest\bin\Debug\ConnectionTest.exe
+H:\ShippingPlatform\ConnectionTest\bin\Debug\ConnectionTest.pdb
+H:\ShippingPlatform\ConnectionTest\bin\Debug\ShippingPlatform.DataBase.dll
+H:\ShippingPlatform\ConnectionTest\bin\Debug\ShippingPlatform.dll
+H:\ShippingPlatform\ConnectionTest\bin\Debug\Dapper.FluentMap.dll
+H:\ShippingPlatform\ConnectionTest\bin\Debug\MySql.Data.dll
+H:\ShippingPlatform\ConnectionTest\bin\Debug\Dapper.dll
+H:\ShippingPlatform\ConnectionTest\bin\Debug\ShippingPlatform.DataBase.pdb
+H:\ShippingPlatform\ConnectionTest\bin\Debug\ShippingPlatform.pdb
+H:\ShippingPlatform\ConnectionTest\bin\Debug\Dapper.FluentMap.xml
+H:\ShippingPlatform\ConnectionTest\bin\Debug\Dapper.xml
+H:\ShippingPlatform\ConnectionTest\obj\Debug\ConnectionTest.exe
+H:\ShippingPlatform\ConnectionTest\obj\Debug\ConnectionTest.pdb

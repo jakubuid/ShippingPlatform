@@ -10,7 +10,7 @@ namespace ShippingPlatform.DataBase
         public Client GetClient(IDbConnection connection, int searchId)
         {
             return connection.Query<Client>(
-                "SELECT * FROM product WHERE id = @id",
+                "SELECT * FROM clients WHERE id_clients = @id",
                 new { id = searchId }).FirstOrDefault();
         }
 

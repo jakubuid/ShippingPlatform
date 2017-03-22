@@ -10,7 +10,7 @@ namespace ShippingPlatform.DataBase
         public Route GetRoute(IDbConnection connection, int searchId)
         {
             return connection.Query<Route>(
-                "SELECT * FROM product WHERE id = @id",
+                "SELECT * FROM routes WHERE id_routes = @id",
                 new { id = searchId }).FirstOrDefault();
         }
 

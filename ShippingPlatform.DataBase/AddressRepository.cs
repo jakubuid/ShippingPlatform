@@ -10,7 +10,7 @@ namespace ShippingPlatform.DataBase
         public Address GetAddress(IDbConnection connection, int searchId)
         {
             return connection.Query<Address>(
-                "SELECT * FROM product WHERE id = @id",
+                "SELECT * FROM addresses WHERE id_addresses = @id",
                 new { id = searchId }).FirstOrDefault();
         }
 

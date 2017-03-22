@@ -4,7 +4,7 @@ using System.Data;
 
 namespace ShippingPlatform.DataBase
 {
-    class PackageService
+    public class PackageService
     {
         private PackageRepository packageRepository = new PackageRepository();
 

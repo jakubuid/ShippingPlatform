@@ -7,7 +7,7 @@ using static Dapper.SqlMapper;
 
 namespace ShippingPlatform.DataBase
 {
-    class ConnectionProvider
+    public static class ConnectionProvider
     {
         public static string GetConnectionString()
         {

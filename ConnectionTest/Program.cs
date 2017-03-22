@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ShippingPlatform.DataBase;
+using System;
 
 namespace ConnectionTest
 {
@@ -10,6 +7,12 @@ namespace ConnectionTest
     {
         static void Main(string[] args)
         {
+            ClientService clientService = new ClientService();
+
+            using (ConnectionProvider.GetConnection())
+            {
+                Console.WriteLine(clientService.FindOneClient(ConnectionProvider.GetConnection(), 2).password);
+            }
         }
     }
 }

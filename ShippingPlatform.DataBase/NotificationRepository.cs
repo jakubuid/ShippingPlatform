@@ -10,7 +10,7 @@ namespace ShippingPlatform.DataBase
         public Notification GetNotification(IDbConnection connection, int searchId)
         {
             return connection.Query<Notification>(
-                "SELECT * FROM product WHERE id = @id",
+                "SELECT * FROM notifications WHERE id_notifications = @id",
                 new { id = searchId }).FirstOrDefault();
         }
         public IEnumerable<Notification> GetAllNotifications(IDbConnection connection)

@@ -4,7 +4,7 @@ using System.Data;
 
 namespace ShippingPlatform.DataBase
 {
-    class OrderService
+    public class OrderService
     {
         private OrderRepository orderRepository = new OrderRepository();
         public Order FindOneOrder(IDbConnection connection, int searchId)

@@ -3,7 +3,7 @@ using System.Data;
 
 namespace ShippingPlatform.DataBase
 {
-    class RouteService
+    public class RouteService
     {
         private RouteRepository routeRepository = new RouteRepository();
 

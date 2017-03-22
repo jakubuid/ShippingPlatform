@@ -10,7 +10,7 @@ namespace ShippingPlatform.DataBase
         public Package GetPackage(IDbConnection connection, int searchId)
         {
             return connection.Query<Package>(
-                "SELECT * FROM product WHERE id = @id",
+                "SELECT * FROM packages WHERE id_packages = @id",
                 new { id = searchId }).FirstOrDefault();
         }
 

@@ -3,7 +3,7 @@ using System.Data;
 
 namespace ShippingPlatform.DataBase
 {
-    class ClientService
+    public class ClientService
     {
         private ClientRepository clientRepository = new ClientRepository();
         public Client FindOneClient(IDbConnection connection, int searchId)

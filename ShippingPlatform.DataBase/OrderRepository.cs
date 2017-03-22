@@ -10,7 +10,7 @@ namespace ShippingPlatform.DataBase
         public Order GetOrder(IDbConnection connection, int searchId)
         {
             return connection.Query<Order>(
-                "SELECT * FROM product WHERE id = @id",
+                "SELECT * FROM orders WHERE id_orders = @id",
                 new { id = searchId }).FirstOrDefault();
         }
 
