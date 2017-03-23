@@ -9,7 +9,9 @@ namespace ShippingPlatform
         private List<Package> packages = new List<Package>();
         public int id { get; set; }
         public Address recipientAddress { get; set; }
+        public int recipientAddressId { get; set; }
         public Address clientAddress { get; set; }
+        public int clientAddressId { get; set; }
         public String orderNumber { get; set; }
         public DateTime createdDay { get; set; }
         public DateTime pickUpDate { get; set; }

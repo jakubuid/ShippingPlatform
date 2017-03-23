@@ -7,7 +7,8 @@ namespace ShippingPlatform
     {
         public int attachmentId { get; set; }
         public int id { get; set; }
-        public int order { get; set; }
+        public Order Order { get; set; }
+        public int orderId { get; set; }
         public String clientEmail { get; set; }
         public String recipientEmail { get; set; }
         public String message{ get; set; }
