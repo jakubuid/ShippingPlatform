@@ -12,10 +12,10 @@ namespace ShippingPlatform.DataBase
         public static string GetConnectionString()
         {
             MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
-            builder.Server = Properties.Settings.Default.Server;
-            builder.Password = Properties.Settings.Default.Password;
-            builder.Database = Properties.Settings.Default.DataBase;
-            builder.UserID = Properties.Settings.Default.Username;
+            builder.Server = "localhost";
+            builder.Password = "root";
+            builder.Database = "shippingplatformdb";
+            builder.UserID = "root";
             return builder.GetConnectionString(true);
         }
         public static IDbConnection GetConnection()

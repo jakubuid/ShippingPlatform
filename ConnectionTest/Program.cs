@@ -1,5 +1,6 @@
 ﻿using ShippingPlatform.DataBase;
 using System;
+using System.Linq;
 
 namespace ConnectionTest
 {

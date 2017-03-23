@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShippingPlatform.DataBase",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionTest", "ConnectionTest\ConnectionTest.csproj", "{08BDA1D3-E811-4ADD-81F5-CE8A09E05528}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService", "WebService\WebService.csproj", "{B8796D24-3EEB-495D-82B5-34634287642C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{08BDA1D3-E811-4ADD-81F5-CE8A09E05528}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08BDA1D3-E811-4ADD-81F5-CE8A09E05528}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08BDA1D3-E811-4ADD-81F5-CE8A09E05528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8796D24-3EEB-495D-82B5-34634287642C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8796D24-3EEB-495D-82B5-34634287642C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8796D24-3EEB-495D-82B5-34634287642C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8796D24-3EEB-495D-82B5-34634287642C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
