@@ -1,6 +1,6 @@
 ﻿using Dapper.FluentMap.Mapping;
 
-namespace ShippingPlatform.DataBase
+namespace ShippingPlatform.DataBase.Mappers
 {
     public class LogisticCenterMapper : EntityMap<LogisticCenter>
     {

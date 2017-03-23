@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Data;
+using ShippingPlatform.DataBase.Repositories;
 
-namespace ShippingPlatform.DataBase
+namespace ShippingPlatform.DataBase.Services
 {
     public class AddressService
     {

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper.FluentMap;
+using ShippingPlatform.DataBase.Mappers;
 
 namespace ShippingPlatform.DataBase
 {

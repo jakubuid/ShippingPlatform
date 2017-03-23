@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 
-namespace ShippingPlatform.DataBase
+namespace ShippingPlatform.DataBase.Repositories
 {
     class PackageRepository
     {

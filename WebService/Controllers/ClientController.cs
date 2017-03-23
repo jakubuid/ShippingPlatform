@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using ShippingPlatform;
 using ShippingPlatform.DataBase;
+using ShippingPlatform.DataBase.Services;
 
 namespace WebService.Controllers
 {

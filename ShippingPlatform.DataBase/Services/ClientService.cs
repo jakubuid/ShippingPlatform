@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using ShippingPlatform.DataBase.Repositories;
+using System.Collections.Generic;
 using System.Data;
 
-namespace ShippingPlatform.DataBase
+namespace ShippingPlatform.DataBase.Services
 {
     public class ClientService
     {
