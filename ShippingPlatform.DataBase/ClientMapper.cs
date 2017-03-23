@@ -7,8 +7,8 @@ namespace ShippingPlatform.DataBase
         public ClientMapper()
         {
             Map(x => x.id).ToColumn("id_clients");
-            Map(x => x.clientAddress).ToColumn("client_address");
-            Map(x => x.order).ToColumn("order");
+            Map(x => x.clientAddressId).ToColumn("id_client_address");
+            Map(x => x.orderId).ToColumn("id_order");
             Map(x => x.login).ToColumn("login");
             Map(x => x.password).ToColumn("password");
             Map(x => x.addressEmail).ToColumn("address_email");

@@ -12,5 +12,6 @@ namespace ShippingPlatform
         public DateTime startTime { get; set; }
         public DateTime endTime { get; set; }
         public int orderId { get; set; }
+        public Order order { get; set; }
     }
 }

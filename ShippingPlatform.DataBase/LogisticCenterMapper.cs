@@ -8,8 +8,8 @@ namespace ShippingPlatform.DataBase
         {
             Map(x => x.id).ToColumn("id_logistic_centers");
             Map(x => x.name).ToColumn("name");
-            Map(x => x.logisticCenterAddress).ToColumn("logistic_center_address");
-            Map(x => x.shippingRoute).ToColumn("shipping_route");
+            Map(x => x.logisticCenterAddressId).ToColumn("id_logistic_center_address");
+            Map(x => x.shippingRouteId).ToColumn("id_shipping_route");
         }
     }
 }
