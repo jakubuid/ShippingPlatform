@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Web.Http;
+using ShippingPlatform.DataBase;
 
 namespace WebService
 {
@@ -10,6 +11,8 @@ namespace WebService
     {
         public static void Register(HttpConfiguration config)
         {
+            DapperConfiguration.Configure();
+
             // Web API configuration and services
             config.Formatters.JsonFormatter.SupportedMediaTypes.Add(
                 new MediaTypeHeaderValue("text/html"));
