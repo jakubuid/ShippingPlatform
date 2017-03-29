@@ -16,7 +16,7 @@ namespace ShippingPlatform.DataBase
         {
             if (isConfigured)
             {
-                return;
+                return; 
             }
             FluentMapper.Initialize(config =>
             {
