@@ -11,12 +11,18 @@ namespace ShippingPlatform.DataBase.Repositories
         {
             return connection.Query<Client>(
                 "SELECT * FROM clients WHERE id_clients = @id",
-                new { id = searchId }).FirstOrDefault();
+                new {id = searchId}).FirstOrDefault();
         }
 
         public IEnumerable<Client> GetAllClients(IDbConnection connection)
         {
             return connection.Query<Client>("SELECT * FROM clients").ToList();
+        }
+
+        public void DeleteClient(IDbConnection connection, int searchId)
+        {
+            connection.Query<Client>("DELETE FROM clients WHERE id_clients = @id",
+                new {id = searchId});
         }
     }
 }

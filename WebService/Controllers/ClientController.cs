@@ -60,6 +60,8 @@ namespace WebService.Controllers
         {
             try
             {
+                ClientService clientService = new ClientService();
+                clientService.DeleteClient(ConnectionProvider.GetConnection(), id);
                 return Ok();
             }
             catch (Exception ex)
@@ -67,7 +69,7 @@ namespace WebService.Controllers
                return BadRequest(ex.Message);
             }
         }
-        //delete
+        
         //put update
         //post insert
         [HttpPost]
