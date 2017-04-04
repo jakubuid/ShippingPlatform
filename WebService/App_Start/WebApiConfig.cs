@@ -11,7 +11,7 @@ namespace WebService
     {
         public static void Register(HttpConfiguration config)
         {
-            //DapperConfiguration.Configure();
+            DapperConfiguration.Configure();
 
             // Web API configuration and services
             config.Formatters.JsonFormatter.SupportedMediaTypes.Add(

@@ -15,3 +15,5 @@ H:\ShippingPlatform\ShippingPlatform\bin\Debug\Newtonsoft.Json.xml
 H:\ShippingPlatform\ShippingPlatform\obj\Debug\ShippingPlatform.Model.csprojResolveAssemblyReference.cache
 H:\ShippingPlatform\ShippingPlatform\obj\Debug\ShippingPlatform.dll
 H:\ShippingPlatform\ShippingPlatform\obj\Debug\ShippingPlatform.pdb
+H:\ShippingPlatform\ShippingPlatform\bin\Debug\nunit.framework.dll
+H:\ShippingPlatform\ShippingPlatform\bin\Debug\nunit.framework.xml

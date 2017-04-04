@@ -13,3 +13,5 @@ H:\ShippingPlatform\ConnectionTest\bin\Debug\Dapper.FluentMap.xml
 H:\ShippingPlatform\ConnectionTest\bin\Debug\Dapper.xml
 H:\ShippingPlatform\ConnectionTest\obj\Debug\ConnectionTest.exe
 H:\ShippingPlatform\ConnectionTest\obj\Debug\ConnectionTest.pdb
+H:\ShippingPlatform\ConnectionTest\bin\Debug\nunit.framework.dll
+H:\ShippingPlatform\ConnectionTest\bin\Debug\nunit.framework.xml

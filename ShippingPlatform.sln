@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionTest", "Connectio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService", "WebService\WebService.csproj", "{B8796D24-3EEB-495D-82B5-34634287642C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShippingPlatform.Test", "ShippingPlatform.Test\ShippingPlatform.Test.csproj", "{D1F1AEEA-0BA5-4AAC-8F23-62EFE4D0EE03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShippingPlatform.Manager", "ShippingPlatform.Manager\ShippingPlatform.Manager.csproj", "{6820B09F-54BF-489A-A8EA-0F234FB68DCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{B8796D24-3EEB-495D-82B5-34634287642C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8796D24-3EEB-495D-82B5-34634287642C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8796D24-3EEB-495D-82B5-34634287642C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1F1AEEA-0BA5-4AAC-8F23-62EFE4D0EE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1F1AEEA-0BA5-4AAC-8F23-62EFE4D0EE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1F1AEEA-0BA5-4AAC-8F23-62EFE4D0EE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1F1AEEA-0BA5-4AAC-8F23-62EFE4D0EE03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6820B09F-54BF-489A-A8EA-0F234FB68DCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6820B09F-54BF-489A-A8EA-0F234FB68DCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6820B09F-54BF-489A-A8EA-0F234FB68DCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6820B09F-54BF-489A-A8EA-0F234FB68DCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

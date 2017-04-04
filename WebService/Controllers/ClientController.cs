@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -31,8 +32,7 @@ namespace WebService.Controllers
         {
             try
             {
-                ClientService clientService = new ClientService();
-                Client client = clientService.FindOneClient(ConnectionProvider.GetConnection(), id);
+                Client client = new ClientService().FindOneClient(ConnectionProvider.GetConnection(), id);
                 return Ok(client);
             }
             catch (Exception ex)
@@ -46,8 +46,7 @@ namespace WebService.Controllers
         {
             try
             {
-                ClientService clientService = new ClientService();
-                return Ok(clientService.FindAllClients(ConnectionProvider.GetConnection()));
+                return Ok(new ClientService().FindAllClients(ConnectionProvider.GetConnection()));
             }
             catch (Exception ex)
             {
@@ -60,8 +59,7 @@ namespace WebService.Controllers
         {
             try
             {
-                ClientService clientService = new ClientService();
-                clientService.DeleteClient(ConnectionProvider.GetConnection(), id);
+                new ClientService().DeleteClient(ConnectionProvider.GetConnection(), id);
                 return Ok();
             }
             catch (Exception ex)
@@ -69,15 +67,27 @@ namespace WebService.Controllers
                return BadRequest(ex.Message);
             }
         }
-        
-        //put update
-        //post insert
-        [HttpPost]
-        public IHttpActionResult Save([FromBody] Client client)
+
+        [HttpPut]
+        public IHttpActionResult Update([FromBody] Client client)
         {
             try
             {
-                //new ClientService().Save(); dodaj metode w servisie ktora dodaje clienta 
+                new ClientService().UpdateClient(ConnectionProvider.GetConnection(), client);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost]
+        public IHttpActionResult Insert([FromBody] Client client)
+        {
+            try
+            {
+                new ClientService().AddClient(ConnectionProvider.GetConnection(), client);
                 return Ok();
             }
             catch (Exception ex)

@@ -1,0 +1,14 @@
+H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\ShippingPlatform.Manager.exe.config
+H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\ShippingPlatform.Manager.exe
+H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\ShippingPlatform.Manager.pdb
+H:\ShippingPlatform\ShippingPlatform.Manager\obj\Debug\ShippingPlatform.Manager.csprojResolveAssemblyReference.cache
+H:\ShippingPlatform\ShippingPlatform.Manager\obj\Debug\MainWindow.g.cs
+H:\ShippingPlatform\ShippingPlatform.Manager\obj\Debug\App.g.cs
+H:\ShippingPlatform\ShippingPlatform.Manager\obj\Debug\ShippingPlatform.Manager_MarkupCompile.cache
+H:\ShippingPlatform\ShippingPlatform.Manager\obj\Debug\ShippingPlatform.Manager_MarkupCompile.lref
+H:\ShippingPlatform\ShippingPlatform.Manager\obj\Debug\MainWindow.baml
+H:\ShippingPlatform\ShippingPlatform.Manager\obj\Debug\ShippingPlatform.Manager.g.resources
+H:\ShippingPlatform\ShippingPlatform.Manager\obj\Debug\ShippingPlatform.Manager.Properties.Resources.resources
+H:\ShippingPlatform\ShippingPlatform.Manager\obj\Debug\ShippingPlatform.Manager.csproj.GenerateResource.Cache
+H:\ShippingPlatform\ShippingPlatform.Manager\obj\Debug\ShippingPlatform.Manager.exe
+H:\ShippingPlatform\ShippingPlatform.Manager\obj\Debug\ShippingPlatform.Manager.pdb

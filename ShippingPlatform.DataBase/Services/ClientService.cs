@@ -22,5 +22,15 @@ namespace ShippingPlatform.DataBase.Services
         {
             clientRepository.DeleteClient(connection, searchId);
         }
+
+        public void UpdateClient(IDbConnection connection, Client client)
+        {
+            clientRepository.UpdateClient(connection, client);
+        }
+
+        public void AddClient(IDbConnection connection, Client client)
+        {
+            clientRepository.AddClient(connection, client);
+        }
     }
 }

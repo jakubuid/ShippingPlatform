@@ -11,5 +11,6 @@ namespace ShippingPlatform
         public double weight { get; set; }
         public String content { get; set; }
         public int orderId { get; set; }
+        public Order order { get; set; }
     }
 }

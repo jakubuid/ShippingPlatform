@@ -16,3 +16,5 @@ H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\EntityFramework.SqlServe
 H:\ShippingPlatform\ShippingPlatform.DataBase\obj\Debug\ShippingPlatform.DataBase.csprojResolveAssemblyReference.cache
 H:\ShippingPlatform\ShippingPlatform.DataBase\obj\Debug\ShippingPlatform.DataBase.dll
 H:\ShippingPlatform\ShippingPlatform.DataBase\obj\Debug\ShippingPlatform.DataBase.pdb
+H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\nunit.framework.dll
+H:\ShippingPlatform\ShippingPlatform.DataBase\bin\Debug\nunit.framework.xml
