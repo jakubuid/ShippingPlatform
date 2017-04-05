@@ -6,7 +6,7 @@ namespace ShippingPlatform.DataBase.Mappers
     {
         public OrderMapper()
         {
-            Map(x => x.id).ToColumn("id_oders");
+            Map(x => x.id).ToColumn("id_orders");
             Map(x => x.recipientAddressId).ToColumn("id_recipient_address");
             Map(x => x.clientAddressId).ToColumn("id_client_address");
             Map(x => x.orderNumber).ToColumn("order_number");

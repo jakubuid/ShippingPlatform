@@ -26,7 +26,17 @@ namespace ShippingPlatform.DataBase.Repositories
 
         public IEnumerable<Client> GetAllClients(IDbConnection connection)
         {
-            return connection.Query<Client>("SELECT * FROM clients").ToList();
+            return connection.Query<Client, Address, Order, Client>(
+                @"SELECT * FROM clients
+                 INNER JOIN addresses a ON clients.id_client_address = a.id_addresses
+                INNER JOIN orders o ON clients.id_order = o.id_orders",
+                 (client, address, order) =>
+                 {
+                     client.clientAddress = address;
+                     client.order = order;
+                     return client;
+                 },
+                 splitOn: "id_addresses, id_orders").ToList();
         }
 
         public void DeleteClient(IDbConnection connection, int searchId)

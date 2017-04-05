@@ -12,12 +12,5 @@ namespace ShippingPlatform
         public String login { get; set; }
         public String  password{ get; set; }
         public String addressEmail { get; set; }
-
-        public Client()
-        {
-            this.login = " ";
-            this.password = " ";
-            this.addressEmail = " ";
-        }
     }
 }
