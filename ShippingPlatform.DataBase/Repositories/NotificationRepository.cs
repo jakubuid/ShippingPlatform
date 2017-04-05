@@ -9,13 +9,29 @@ namespace ShippingPlatform.DataBase.Repositories
     {
         public Notification GetNotification(IDbConnection connection, int searchId)
         {
-            return connection.Query<Notification>(
-                "SELECT * FROM notifications WHERE id_notifications = @id",
-                new { id = searchId }).FirstOrDefault();
+            return connection.Query<Notification, Order, Notification>(
+                @"SELECT * FROM notifications
+                INNER JOIN orders o ON notifications.id_order = o.id_orders
+                WHERE id_notifications = @id",
+                (notifications, order) =>
+                {
+                    notifications.order = order;
+                    return notifications;
+                },
+                new {id = searchId}, splitOn: "id_orders").FirstOrDefault();
         }
+
         public IEnumerable<Notification> GetAllNotifications(IDbConnection connection)
         {
-            return connection.Query<Notification>("SELECT * FROM notifications").ToList();
+            return connection.Query<Notification, Order, Notification>(
+                @"SELECT * FROM notifications
+                 INNER JOIN orders o ON notifications.id_order = o.id_orders",
+                (notifications, orderTmp) =>
+                {
+                    notifications.order = orderTmp;
+                    return notifications;
+                }, splitOn: "id_orders"
+            ).ToList();
         }
     }
 }

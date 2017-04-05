@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShippingPlatform.Manager"
         mc:Ignorable="d"
-        Title="ShippingPlatform Manager" Height="350" Width="525">
-    <Grid>
-       <Button Height="50" Width="50"></Button>
+        Title="ShippingPlatform Manager" Height="350" Width="725">
+    <Grid Height="350" Width="725" Background="#FFD1F9EE">
+        <TextBlock Height="32" HorizontalAlignment="Left" Margin="16,15,0,0" Name="textBlockHeading"
+                   Text="Clients" VerticalAlignment="Top" Width="210" FontSize="20" FontStretch="Normal" />
+        <Grid HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="812" Margin="-87,0,-100,0">
+            <DataGrid AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="90,55,0,46"
+                      Name="dataGridClients" Width="720" ItemsSource="{Binding Path=LoadDataBinding}"
+                      CanUserResizeRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Path=CustomerID}" Header="ClientID" Width="100"
+                                        IsReadOnly="True" />
+                    <DataGridTextColumn Binding="{Binding Path=ContactName}" Header="Login" Width="100"
+                                        IsReadOnly="True" />
+                    <DataGridTextColumn Binding="{Binding Path=Address}" Header="ClientAddressId" Width="150"
+                                        IsReadOnly="True" />
+                    <DataGridTextColumn Binding="{Binding Path=City}" Header="Password" Width="100" IsReadOnly="True" />
+                    <DataGridTextColumn Binding="{Binding Path=Phone}" Header="Email" Width="120"
+                                        IsReadOnly="True" />
+                    <DataGridTextColumn Binding="{Binding Path=Phone}" Header="OrderId" Width="120"
+                                        IsReadOnly="True" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Content="Load Data" Height="25" HorizontalAlignment="Left" Margin="687,275,0,0"
+                    Name="btnloaddata" VerticalAlignment="Top" Width="100" Click="btnloaddata_Click" />
+        </Grid>
     </Grid>
 </Window>

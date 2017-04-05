@@ -9,14 +9,28 @@ namespace ShippingPlatform.DataBase.Repositories
     {
         public Package GetPackage(IDbConnection connection, int searchId)
         {
-            return connection.Query<Package>(
-                "SELECT * FROM packages WHERE id_packages = @id",
-                new { id = searchId }).FirstOrDefault();
+            return connection.Query<Package, Order, Package>(
+                @"SELECT * FROM packages
+                INNER JOIN orders o ON packages.id_order = o.id_orders
+                WHERE id_packages = @id",
+                (packages, order) =>
+                {
+                    packages.order = order;
+                    return packages;
+                },
+                new { id = searchId }, splitOn: "id_orders").FirstOrDefault();
         }
 
         public IEnumerable<Package> GetAllPackages(IDbConnection connection)
         {
-            return connection.Query<Package>("SELECT * FROM packages").ToList();
+            return connection.Query<Package, Order, Package>(
+                @"SELECT * FROM packages
+                INNER JOIN orders o ON packages.id_order = o.id_orders",
+                (packages, order) =>
+                {
+                    packages.order = order;
+                    return packages;
+                }, splitOn: "id_orders").ToList();
         }
     }
 }
