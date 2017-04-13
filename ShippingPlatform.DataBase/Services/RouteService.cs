@@ -6,16 +6,16 @@ namespace ShippingPlatform.DataBase.Services
 {
     public class RouteService
     {
-        private RouteRepository routeRepository = new RouteRepository();
+        private RouteRepository _routRepository = new RouteRepository();
 
         public Route FindOneRoute(IDbConnection connection, int searchId)
         {
-            return routeRepository.GetRoute(connection, searchId);
+            return _routRepository.GetRoute(connection, searchId);
         }
 
         public IEnumerable<Route> FindAllRoutes(IDbConnection connection)
         {
-            return routeRepository.GetAllRoutes(connection);
+            return _routRepository.GetAllRoutes(connection);
         }
     }
 }
