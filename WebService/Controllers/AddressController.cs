@@ -12,7 +12,6 @@ namespace WebService.Controllers
 {
     public class AddressController : ApiController
     {
-
         [HttpGet]
         public IHttpActionResult GetAll()
         {
@@ -32,7 +31,7 @@ namespace WebService.Controllers
         {
             try
             {
-                 Address address = new AddressService().FindOneAddress(ConnectionProvider.GetConnection(), id);
+                Address address = new AddressService().FindOneAddress(ConnectionProvider.GetConnection(), id);
                 return Ok(address);
             }
             catch (Exception ex)

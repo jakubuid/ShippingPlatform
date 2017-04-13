@@ -55,7 +55,7 @@ namespace WebService.Controllers
         }
 
         [HttpDelete]
-        public IHttpActionResult Delete([FromUri]int id)
+        public IHttpActionResult Delete([FromUri] int id)
         {
             try
             {
@@ -64,7 +64,7 @@ namespace WebService.Controllers
             }
             catch (Exception ex)
             {
-               return BadRequest(ex.Message);
+                return BadRequest(ex.Message);
             }
         }
 

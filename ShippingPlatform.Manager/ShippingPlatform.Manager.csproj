@@ -90,6 +90,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -98,6 +99,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShippingPlatform.DataBase\ShippingPlatform.DataBase.csproj">
+      <Project>{1BD390B6-95A8-4842-AFD8-1171C3CCE2C1}</Project>
+      <Name>ShippingPlatform.DataBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShippingPlatform.Test\ShippingPlatform.Test.csproj">
+      <Project>{d1f1aeea-0ba5-4aac-8f23-62efe4d0ee03}</Project>
+      <Name>ShippingPlatform.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShippingPlatform\ShippingPlatform.Model.csproj">
+      <Project>{96ddef58-1925-4cd0-8c54-60839fd3f312}</Project>
+      <Name>ShippingPlatform.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebService\WebService.csproj">
+      <Project>{b8796d24-3eeb-495d-82b5-34634287642c}</Project>
+      <Name>WebService</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -14,16 +14,16 @@
                       Name="dataGridClients" Width="720" ItemsSource="{Binding Path=LoadDataBinding}"
                       CanUserResizeRows="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding Path=CustomerID}" Header="ClientID" Width="100"
+                    <DataGridTextColumn Binding="{Binding Path=id}" Header="ClientID" Width="100"
                                         IsReadOnly="True" />
-                    <DataGridTextColumn Binding="{Binding Path=ContactName}" Header="Login" Width="100"
+                    <DataGridTextColumn Binding="{Binding Path=login}" Header="Login" Width="100"
                                         IsReadOnly="True" />
-                    <DataGridTextColumn Binding="{Binding Path=Address}" Header="ClientAddressId" Width="150"
+                    <DataGridTextColumn Binding="{Binding Path=clientAddressId}" Header="ClientAddressId" Width="150"
                                         IsReadOnly="True" />
-                    <DataGridTextColumn Binding="{Binding Path=City}" Header="Password" Width="100" IsReadOnly="True" />
-                    <DataGridTextColumn Binding="{Binding Path=Phone}" Header="Email" Width="120"
+                    <DataGridTextColumn Binding="{Binding Path=password}" Header="Password" Width="100" IsReadOnly="True" />
+                    <DataGridTextColumn Binding="{Binding Path=email}" Header="Email" Width="120"
                                         IsReadOnly="True" />
-                    <DataGridTextColumn Binding="{Binding Path=Phone}" Header="OrderId" Width="120"
+                    <DataGridTextColumn Binding="{Binding Path=orderId}" Header="OrderId" Width="120"
                                         IsReadOnly="True" />
                 </DataGrid.Columns>
             </DataGrid>

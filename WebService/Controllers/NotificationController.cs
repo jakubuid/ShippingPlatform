@@ -31,7 +31,8 @@ namespace WebService.Controllers
         {
             try
             {
-                Notification notification = new NotificationService().FindOneNotification(ConnectionProvider.GetConnection(), id);
+                Notification notification =
+                    new NotificationService().FindOneNotification(ConnectionProvider.GetConnection(), id);
                 return Ok(notification);
             }
             catch (Exception ex)
