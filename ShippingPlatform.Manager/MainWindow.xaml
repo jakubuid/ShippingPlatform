@@ -7,23 +7,32 @@
         mc:Ignorable="d"
         Title="ShippingPlatform Manager" Height="350" Width="725">
     <Grid Height="350" Width="725" Background="#FFD1F9EE">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="199*"/>
+            <ColumnDefinition Width="527*"/>
+        </Grid.ColumnDefinitions>
         <TextBlock Height="32" HorizontalAlignment="Left" Margin="16,15,0,0" Name="textBlockHeading"
-                   Text="Clients" VerticalAlignment="Top" Width="210" FontSize="20" FontStretch="Normal" />
-        <Grid HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="812" Margin="-87,0,-100,0">
+                   Text="Clients" VerticalAlignment="Top" Width="210" FontSize="20" FontStretch="Normal" Grid.ColumnSpan="2" />
+        <Grid HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="812" Margin="-87,0,0,0" Grid.ColumnSpan="2">
             <DataGrid AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="90,55,0,46"
-                      Name="dataGridClients" Width="720" ItemsSource="{Binding Path=LoadDataBinding}"
+                      Name="dataGridClients" Width="697" ItemsSource="{Binding Path=LoadDataBinding}"
                       CanUserResizeRows="False">
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="DataGridColumnHeader">
+                        <EventSetter Event="Click" Handler="columnHeader_Click"/>
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
                 <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding Path=id}" Header="ClientID" Width="100"
+                    <DataGridTextColumn Binding="{Binding Path=id_clients}" Header="ClientID" Width="100"
                                         IsReadOnly="True" />
                     <DataGridTextColumn Binding="{Binding Path=login}" Header="Login" Width="100"
                                         IsReadOnly="True" />
-                    <DataGridTextColumn Binding="{Binding Path=clientAddressId}" Header="ClientAddressId" Width="150"
+                    <DataGridTextColumn Binding="{Binding Path=id_client_address}" Header="ClientAddressId" Width="150"
                                         IsReadOnly="True" />
                     <DataGridTextColumn Binding="{Binding Path=password}" Header="Password" Width="100" IsReadOnly="True" />
-                    <DataGridTextColumn Binding="{Binding Path=email}" Header="Email" Width="120"
+                    <DataGridTextColumn Binding="{Binding Path=address_email}" Header="Email" Width="120"
                                         IsReadOnly="True" />
-                    <DataGridTextColumn Binding="{Binding Path=orderId}" Header="OrderId" Width="120"
+                    <DataGridTextColumn Binding="{Binding Path=id_order}" Header="OrderId" Width="120"
                                         IsReadOnly="True" />
                 </DataGrid.Columns>
             </DataGrid>
