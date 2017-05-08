@@ -56,13 +56,21 @@ namespace ShippingPlatform.DataBase.Repositories
                 new {id = searchId});
         }
 
-        public void AddClient(IDbConnection connection, Client client)
+        public IEnumerable<Client> AddClient(IDbConnection connection, int newClientAddressId, int newOrderId, string newLogin, string newPassword, string newAddressEmail)
         {
-            connection.Query<Client>
+            return connection.Query<Client>
             (
-                @"INSERT INTO clients
-                VALUES (@clientAddressId, @orderId, @login, @password, @addressemail
-                SELECT cast(scope_identity( ) as int");
+                @"INSERT INTO 
+                clients(id_client_address, id_order, login, password, address_email)
+                VALUES(@clientAddressId, @orderId, @login, @password, @addressemail);",
+                new
+                {
+                    id_client_address = newClientAddressId,
+                    id_order = newOrderId,
+                    login = newLogin,
+                    password = newPassword,
+                    address_email = newAddressEmail
+                });
         }
 
         public void UpdateClient(IDbConnection connection, Client client)

@@ -56,3 +56,4 @@ H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\System.Web.Razor.xml
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\System.Web.WebPages.Razor.xml
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\System.Web.WebPages.xml
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\System.Web.WebPages.Deployment.xml
+H:\ShippingPlatform\ShippingPlatform.Manager\obj\Debug\GeneratedInternalTypeHelper.g.cs

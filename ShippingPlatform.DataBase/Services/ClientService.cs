@@ -23,14 +23,14 @@ namespace ShippingPlatform.DataBase.Services
             clientRepository.DeleteClient(connection, searchId);
         }
 
+        public IEnumerable<Client> AddClient(IDbConnection connection, Client client)
+        {
+            return clientRepository.AddClient(connection, client.clientAddressId, client.orderId, client.login, client.password, client.addressEmail);
+        }
+
         public void UpdateClient(IDbConnection connection, Client client)
         {
             clientRepository.UpdateClient(connection, client);
-        }
-
-        public void AddClient(IDbConnection connection, Client client)
-        {
-            clientRepository.AddClient(connection, client);
         }
     }
 }

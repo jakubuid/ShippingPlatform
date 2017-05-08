@@ -60,6 +60,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ClientsViewModel.cs" />
+    <Compile Include="ClientViewModel.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="ViewModelBaseClass.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -74,6 +78,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PasswordStrenghtConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

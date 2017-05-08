@@ -68,12 +68,12 @@ namespace WebService.Controllers
             }
         }
 
-        [HttpPut]
-        public IHttpActionResult Update([FromBody] Client client)
+        [HttpPost]
+        public IHttpActionResult Insert([FromBody] Client client)
         {
             try
             {
-                new ClientService().UpdateClient(ConnectionProvider.GetConnection(), client);
+                new ClientService().AddClient(ConnectionProvider.GetConnection(), client);
                 return Ok();
             }
             catch (Exception ex)
@@ -82,12 +82,12 @@ namespace WebService.Controllers
             }
         }
 
-        [HttpPost]
-        public IHttpActionResult Insert([FromBody] Client client)
+        [HttpPut]
+        public IHttpActionResult Update([FromBody] Client client)
         {
             try
             {
-                new ClientService().AddClient(ConnectionProvider.GetConnection(), client);
+                new ClientService().UpdateClient(ConnectionProvider.GetConnection(), client);
                 return Ok();
             }
             catch (Exception ex)

@@ -34,6 +34,8 @@ namespace ShippingPlatform.Manager
         public MainWindow()
         {
             InitializeComponent();
+
+            //DataContext = new ClientsViewModel(); ONLY LINE OF CODE HERE
         }
 
         #endregion
@@ -59,7 +61,7 @@ namespace ShippingPlatform.Manager
             var columnHeader = sender as DataGridColumnHeader;
             if (columnHeader != null)
             {
-                // do stuff
+                columnHeader.Column.Header.ToString();
             }
         }
     }

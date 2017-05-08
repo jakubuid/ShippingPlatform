@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:ShippingPlatform.Manager"
         mc:Ignorable="d"
         Title="ShippingPlatform Manager" Height="350" Width="725">
+    <Window.Resources>
+        <local:PasswordStrenghtConverter x:Key="PasswordStrenghtConverter"></local:PasswordStrenghtConverter>
+    </Window.Resources>
     <Grid Height="350" Width="725" Background="#FFD1F9EE">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="199*"/>
@@ -30,6 +33,15 @@
                     <DataGridTextColumn Binding="{Binding Path=id_client_address}" Header="ClientAddressId" Width="150"
                                         IsReadOnly="True" />
                     <DataGridTextColumn Binding="{Binding Path=password}" Header="Password" Width="100" IsReadOnly="True" />
+                    <DataGridTemplateColumn Header="Password Strenght">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <HierarchicalDataTemplate>
+                                <Rectangle Fill="{Binding Path=password, Mode=OneWay, Converter={StaticResource PasswordStrenghtConverter}}">
+                                    
+                                </Rectangle>
+                            </HierarchicalDataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
                     <DataGridTextColumn Binding="{Binding Path=address_email}" Header="Email" Width="120"
                                         IsReadOnly="True" />
                     <DataGridTextColumn Binding="{Binding Path=id_order}" Header="OrderId" Width="120"
