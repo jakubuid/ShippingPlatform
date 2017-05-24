@@ -5,51 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShippingPlatform.Manager"
         mc:Ignorable="d"
-        Title="ShippingPlatform Manager" Height="350" Width="725">
-    <Window.Resources>
-        <local:PasswordStrenghtConverter x:Key="PasswordStrenghtConverter"></local:PasswordStrenghtConverter>
-    </Window.Resources>
-    <Grid Height="350" Width="725" Background="#FFD1F9EE">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="199*"/>
-            <ColumnDefinition Width="527*"/>
-        </Grid.ColumnDefinitions>
-        <TextBlock Height="32" HorizontalAlignment="Left" Margin="16,15,0,0" Name="textBlockHeading"
-                   Text="Clients" VerticalAlignment="Top" Width="210" FontSize="20" FontStretch="Normal" Grid.ColumnSpan="2" />
-        <Grid HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="812" Margin="-87,0,0,0" Grid.ColumnSpan="2">
-            <DataGrid AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="90,55,0,46"
-                      Name="dataGridClients" Width="697" ItemsSource="{Binding Path=LoadDataBinding}"
-                      CanUserResizeRows="False">
-                <DataGrid.ColumnHeaderStyle>
-                    <Style TargetType="DataGridColumnHeader">
-                        <EventSetter Event="Click" Handler="columnHeader_Click"/>
-                    </Style>
-                </DataGrid.ColumnHeaderStyle>
-                <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding Path=id_clients}" Header="ClientID" Width="100"
-                                        IsReadOnly="True" />
-                    <DataGridTextColumn Binding="{Binding Path=login}" Header="Login" Width="100"
-                                        IsReadOnly="True" />
-                    <DataGridTextColumn Binding="{Binding Path=id_client_address}" Header="ClientAddressId" Width="150"
-                                        IsReadOnly="True" />
-                    <DataGridTextColumn Binding="{Binding Path=password}" Header="Password" Width="100" IsReadOnly="True" />
-                    <DataGridTemplateColumn Header="Password Strenght">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <HierarchicalDataTemplate>
-                                <Rectangle Fill="{Binding Path=password, Mode=OneWay, Converter={StaticResource PasswordStrenghtConverter}}">
-                                    
-                                </Rectangle>
-                            </HierarchicalDataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTextColumn Binding="{Binding Path=address_email}" Header="Email" Width="120"
-                                        IsReadOnly="True" />
-                    <DataGridTextColumn Binding="{Binding Path=id_order}" Header="OrderId" Width="120"
-                                        IsReadOnly="True" />
-                </DataGrid.Columns>
-            </DataGrid>
-            <Button Content="Load Data" Height="25" HorizontalAlignment="Left" Margin="687,275,0,0"
-                    Name="btnloaddata" VerticalAlignment="Top" Width="100" Click="btnloaddata_Click" />
-        </Grid>
+        Title="ShippingPlatform Manager" Height="402" Width="583.5">
+    <Grid>
+        <TextBlock x:Name="titleBlock" HorizontalAlignment="Left" Margin="129,33,0,0" TextWrapping="Wrap" Text="SHIPPING PLATFORM" VerticalAlignment="Top" Height="35" Width="317" FontWeight="Bold" FontSize="24" TextAlignment="Center" Foreground="Red" RenderTransformOrigin="-0.482,0.429"/>
+        <TextBox x:Name="loginBox" HorizontalAlignment="Left" Height="25" Margin="155,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" RenderTransformOrigin="-0.031,0.406" BorderBrush="Red" TextAlignment="Justify" FontSize="14.667"/>
+        <TextBox x:Name="pwdBox" HorizontalAlignment="Left" Height="25" Margin="155,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" FontSize="14.667" BorderBrush="Red"/>
+        <Button x:Name="loginButton" Content="Login" HorizontalAlignment="Left" Margin="158,213,0,0" VerticalAlignment="Top" Width="114" Height="20" Click="loginButton_Click"/>
+        <Button x:Name="registerButton" Content="Register" HorizontalAlignment="Left" Margin="328,213,0,0" VerticalAlignment="Top" Width="114" Height="20"/>
     </Grid>
 </Window>

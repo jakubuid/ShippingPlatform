@@ -29,40 +29,54 @@ namespace ShippingPlatform.Manager
     public partial class MainWindow : Window
     {
         #region MySqlConnection Connection
-        MySqlConnection conn = new MySqlConnection(ConnectionProvider.GetConnectionString());
+
+        public MySqlConnection dbConnection = new MySqlConnection(ConnectionProvider.GetConnectionString());
 
         public MainWindow()
         {
             InitializeComponent();
-
-            //DataContext = new ClientsViewModel(); ONLY LINE OF CODE HERE
+            //DataContext = new ClientsViewModel(); 
         }
 
-        #endregion
-        #region bind data to DataGrid.
-
-        private void btnloaddata_Click(object sender, RoutedEventArgs e)
+        private void loginButton_Click(object sender, RoutedEventArgs e)
         {
-            using (ConnectionProvider.GetConnection())
+            try
             {
-                MySqlCommand cmd = new MySqlCommand(
-                @"SELECT id_clients, id_client_address, id_order, login, password, address_email FROM clients", conn);
+                dbConnection.Open();
+                string query = @"SELECT *
+                        FROM clients
+                        WHERE login='" + this.loginBox.Text + "' and password='" + this.pwdBox.Text + "'";
 
-                MySqlDataAdapter adp = new MySqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                adp.Fill(ds, "LoadDataBinding");
-                dataGridClients.DataContext = ds;
+                MySqlCommand createCommand = new MySqlCommand(query, dbConnection);
+                createCommand.ExecuteNonQuery();
+
+                MySqlDataReader dataReader = createCommand.ExecuteReader();
+
+                int count = 0;
+                while (dataReader.Read())
+                {
+                    count++;
+                }
+
+                if (count == 1)
+                {
+                    MessageBox.Show("Login and password are correct");
+                }
+                else if (count > 1)
+                {
+                    MessageBox.Show("Login and password are duplicated");
+                }
+                else if (count < 1)
+                {
+                    MessageBox.Show("Login and password are incorrect");
+                }
             }
-        }
-        #endregion
-
-        private void columnHeader_Click(object sender, RoutedEventArgs e)
-        {
-            var columnHeader = sender as DataGridColumnHeader;
-            if (columnHeader != null)
+            catch (Exception ex)
             {
-                columnHeader.Column.Header.ToString();
+                MessageBox.Show(ex.Message);
             }
         }
     }
+
+    #endregion
 }
