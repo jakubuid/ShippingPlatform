@@ -39,5 +39,35 @@ namespace WebService.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        //add
+        [HttpPost]
+        public IHttpActionResult Post([FromBody] Address address)
+        {
+            try
+            {
+                new AddressService().AddAddress(ConnectionProvider.GetConnection(), address);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        //update
+        [HttpPut]
+        public IHttpActionResult Put([FromBody] Address address, int id)
+        {
+            try
+            {
+                new AddressService().UpdateAddress(ConnectionProvider.GetConnection(), address, id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

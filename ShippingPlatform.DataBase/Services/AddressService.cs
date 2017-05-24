@@ -17,5 +17,16 @@ namespace ShippingPlatform.DataBase.Services
         {
             return addressRepository.GetAllAddresses(connection);
         }
+
+        public IEnumerable<Client> AddAddress(IDbConnection connection, Address address)
+        {
+            return addressRepository.AddAddress(connection, address.country, address.city, address.zipcode,
+                address.houseNumber);
+        }
+
+        public Address UpdateAddress(IDbConnection connection, Address address, int id)
+        {
+           return addressRepository.UpdateAddress(connection, address, id);
+        }
     }
 }

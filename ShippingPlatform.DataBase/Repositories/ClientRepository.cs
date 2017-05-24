@@ -56,13 +56,14 @@ namespace ShippingPlatform.DataBase.Repositories
                 new {id = searchId});
         }
 
-        public IEnumerable<Client> AddClient(IDbConnection connection, int newClientAddressId, int newOrderId, string newLogin, string newPassword, string newAddressEmail)
+        public IEnumerable<Client> AddClient(IDbConnection connection, int newClientAddressId, int newOrderId,
+            string newLogin, string newPassword, string newAddressEmail)
         {
             return connection.Query<Client>
             (
                 @"INSERT INTO 
                 clients(id_client_address, id_order, login, password, address_email)
-                VALUES(@clientAddressId, @orderId, @login, @password, @addressemail);",
+                VALUES(@id_client_address, @id_order, @login, @password, @address_email);",
                 new
                 {
                     id_client_address = newClientAddressId,
@@ -73,14 +74,26 @@ namespace ShippingPlatform.DataBase.Repositories
                 });
         }
 
-        public void UpdateClient(IDbConnection connection, Client client)
+        public Client UpdateClient(IDbConnection connection, Client client, int clientId)
         {
-            connection.Query<Client>
+            return connection.Query<Client>
             (
-                @"UPDATE clients SET id_client_address = @clientAddressId,
-                id_order = @orderId, login = @login, password = @password,
-                address_email = @addressEmail,
-                WHERE id_clients = @id");
+                @"UPDATE clients SET 
+                id_client_address = @id_client_address,
+                id_order = @id_order,
+                login = @login,
+                password = @password,
+                address_email = @address_email
+                WHERE id_clients = @id",
+                new
+                {
+                    id = clientId,
+                    id_client_address = client.clientAddressId,
+                    id_order = client.orderId,
+                    login = client.login,
+                    password = client.password,
+                    address_email = client.addressEmail
+                }).FirstOrDefault();
         }
     }
 }

@@ -19,7 +19,7 @@ namespace ConnectionTest
 
             using (ConnectionProvider.GetConnection())
             {
-                Console.WriteLine(clientService.FindOneClient(ConnectionProvider.GetConnection(), 1).login);
+                //Console.WriteLine(clientService.FindOneClient(ConnectionProvider.GetConnection(), 1).login);
                 Console.WriteLine(addressService.FindOneAddress(ConnectionProvider.GetConnection(), 1).country);
                 Console.WriteLine(lgCenterService.FindOneLogisticCenter(ConnectionProvider.GetConnection(), 1).name);
                 Console.WriteLine(notificationService.FindOneNotification(ConnectionProvider.GetConnection(), 1).message);

@@ -28,9 +28,9 @@ namespace ShippingPlatform.DataBase.Services
             return clientRepository.AddClient(connection, client.clientAddressId, client.orderId, client.login, client.password, client.addressEmail);
         }
 
-        public void UpdateClient(IDbConnection connection, Client client)
+        public Client UpdateClient(IDbConnection connection, Client client, int id)
         {
-            clientRepository.UpdateClient(connection, client);
+            return clientRepository.UpdateClient(connection, client, id);
         }
     }
 }
