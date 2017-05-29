@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShippingPlatform.Manager"
         mc:Ignorable="d"
-        Title="ShippingPlatform Manager" Height="402" Width="583.5">
+        Title="ShippingPlatform Login" Height="402" Width="583.5">
     <Grid>
         <TextBlock x:Name="titleBlock" HorizontalAlignment="Left" Margin="129,33,0,0" TextWrapping="Wrap" Text="SHIPPING PLATFORM" VerticalAlignment="Top" Height="35" Width="317" FontWeight="Bold" FontSize="24" TextAlignment="Center" Foreground="Red" RenderTransformOrigin="-0.482,0.429"/>
-        <TextBox x:Name="loginBox" HorizontalAlignment="Left" Height="25" Margin="155,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" RenderTransformOrigin="-0.031,0.406" BorderBrush="Red" TextAlignment="Justify" FontSize="14.667"/>
-        <TextBox x:Name="pwdBox" HorizontalAlignment="Left" Height="25" Margin="155,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" FontSize="14.667" BorderBrush="Red"/>
+        <TextBox x:Name="loginBox" HorizontalAlignment="Left" Height="25" Margin="210,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" RenderTransformOrigin="-0.031,0.406" TextAlignment="Justify" FontSize="14.667"/>
         <Button x:Name="loginButton" Content="Login" HorizontalAlignment="Left" Margin="158,213,0,0" VerticalAlignment="Top" Width="114" Height="20" Click="loginButton_Click"/>
-        <Button x:Name="registerButton" Content="Register" HorizontalAlignment="Left" Margin="328,213,0,0" VerticalAlignment="Top" Width="114" Height="20"/>
+        <Button x:Name="registerButton" Content="Register" HorizontalAlignment="Left" Margin="328,213,0,0" VerticalAlignment="Top" Width="114" Height="20" Click="registerButton_Click"/>
+        <PasswordBox x:Name="pwdBox" HorizontalAlignment="Left" Margin="210,150,0,0" VerticalAlignment="Top" Width="250" Height="25"/>
+        <Label x:Name="label" Content="Login" HorizontalAlignment="Left" Margin="124,100,0,0" VerticalAlignment="Top" Width="59"/>
+        <Label x:Name="label1" Content="Password&#xD;&#xA;" HorizontalAlignment="Left" Margin="122,151,0,0" VerticalAlignment="Top" Height="30"/>
     </Grid>
 </Window>

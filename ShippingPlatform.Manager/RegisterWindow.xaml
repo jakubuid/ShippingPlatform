@@ -1,0 +1,20 @@
+﻿<Window x:Class="ShippingPlatform.Manager.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShippingPlatform.Manager"
+        mc:Ignorable="d"
+        Title="ShippingPlatform Registration" Height="369" Width="468">
+    <Grid>
+        <TextBlock x:Name="titleBlock" HorizontalAlignment="Left" Margin="80,33,0,0" TextWrapping="Wrap" Text="SHIPPING PLATFORM" VerticalAlignment="Top" Height="35" Width="317" FontWeight="Bold" FontSize="24" TextAlignment="Center" Foreground="Red" RenderTransformOrigin="-0.482,0.429"/>
+        <TextBox x:Name="loginBox" HorizontalAlignment="Left" Height="25" Margin="110,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" RenderTransformOrigin="-0.031,0.406" TextAlignment="Justify" FontSize="14.667"/>
+        <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" Margin="110,280,0,0" VerticalAlignment="Top" Width="114" Height="20" Click="backButton_Click" RenderTransformOrigin="0.474,4.275"/>
+        <Button x:Name="registerButton" Content="Register" HorizontalAlignment="Left" Margin="270,280,0,0" VerticalAlignment="Top" Width="114" Height="20" Click="registerButton_Click"/>
+        <PasswordBox x:Name="pwdBox" HorizontalAlignment="Left" Margin="110,200,0,0" VerticalAlignment="Top" Width="250" Height="25" RenderTransformOrigin="0.512,2.1"/>
+        <Label x:Name="loginLabel" Content="Login" HorizontalAlignment="Left" Margin="50,100,0,0" VerticalAlignment="Top" Width="59" RenderTransformOrigin="-0.983,1.346"/>
+        <Label x:Name="pwdLabel" Content="Password&#xD;&#xA;" HorizontalAlignment="Left" Margin="50,200,0,0" VerticalAlignment="Top" Height="30"/> 
+        <TextBox x:Name="emailBox" HorizontalAlignment="Left" Height="25" Margin="110,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
+        <Label x:Name="emailLabel" Content="Email&#xA;" HorizontalAlignment="Left" Margin="50,155,0,0" VerticalAlignment="Top" Height="30"/>
+    </Grid>
+</Window>

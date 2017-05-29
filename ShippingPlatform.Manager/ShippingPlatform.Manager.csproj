@@ -62,8 +62,18 @@
     </ApplicationDefinition>
     <Compile Include="ClientsViewModel.cs" />
     <Compile Include="ClientViewModel.cs" />
+    <Compile Include="MainPlatformWindow.xaml.cs">
+      <DependentUpon>MainPlatformWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="RegisterWindow.xaml.cs">
+      <DependentUpon>RegisterWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModelBaseClass.cs" />
+    <Page Include="MainPlatformWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -76,9 +86,12 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="RegisterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PasswordStrenghtConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -110,10 +123,6 @@
     <ProjectReference Include="..\ShippingPlatform.DataBase\ShippingPlatform.DataBase.csproj">
       <Project>{1BD390B6-95A8-4842-AFD8-1171C3CCE2C1}</Project>
       <Name>ShippingPlatform.DataBase</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ShippingPlatform.Test\ShippingPlatform.Test.csproj">
-      <Project>{d1f1aeea-0ba5-4aac-8f23-62efe4d0ee03}</Project>
-      <Name>ShippingPlatform.Test</Name>
     </ProjectReference>
     <ProjectReference Include="..\ShippingPlatform\ShippingPlatform.Model.csproj">
       <Project>{96ddef58-1925-4cd0-8c54-60839fd3f312}</Project>

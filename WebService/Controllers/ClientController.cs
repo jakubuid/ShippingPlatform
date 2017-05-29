@@ -13,46 +13,46 @@ namespace WebService.Controllers
 {
     public class ClientController : ApiController
     {
-//        [HttpGet]
-//        public IHttpActionResult GetAll()
-//        {
-//            try
-//            {
-//                ClientService clientService = new ClientService();
-//                return Ok(clientService.FindAllClients(ConnectionProvider.GetConnection()));
-//            }
-//            catch (Exception ex)
-//            {
-//                return BadRequest(ex.Message);
-//            }
-//        }
-//
-//        [HttpGet]
-//        public IHttpActionResult Get(int id)
-//        {
-//            try
-//            {
-//                Client client = new ClientService().FindOneClient(ConnectionProvider.GetConnection(), id);
-//                return Ok(client);
-//            }
-//            catch (Exception ex)
-//            {
-//                return BadRequest(ex.Message);
-//            }
-//        }
-//
-//        [HttpGet]
-//        public IHttpActionResult Search(string searchTerm)
-//        {
-//            try
-//            {
-//                return Ok(new ClientService().FindAllClients(ConnectionProvider.GetConnection()));
-//            }
-//            catch (Exception ex)
-//            {
-//                return BadRequest(ex.Message);
-//            }
-//        }
+        [HttpGet]
+        public IHttpActionResult GetAll()
+        {
+            try
+            {
+                ClientService clientService = new ClientService();
+                return Ok(clientService.FindAllClients(ConnectionProvider.GetConnection()));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        public IHttpActionResult Get(int id)
+        {
+            try
+            {
+                Client client = new ClientService().FindOneClient(ConnectionProvider.GetConnection(), id);
+                return Ok(client);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        public IHttpActionResult Search(string searchTerm)
+        {
+            try
+            {
+                return Ok(new ClientService().FindAllClients(ConnectionProvider.GetConnection()));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 
         [HttpDelete]
         public IHttpActionResult Delete([FromUri] int id)

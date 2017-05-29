@@ -27,11 +27,9 @@ H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\roslyn\VBCSCompiler.exe.c
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\MySql.Data.dll
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\ShippingPlatform.DataBase.dll
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\ShippingPlatform.dll
-H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\ShippingPlatform.Test.dll
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\WebService.dll
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\Dapper.FluentMap.dll
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\Dapper.dll
-H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\nunit.framework.dll
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\System.Web.Http.dll
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\System.Web.Mvc.dll
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\System.Net.Http.Formatting.dll
@@ -42,12 +40,10 @@ H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\System.Web.WebPages.dll
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\Microsoft.Web.Infrastructure.dll
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\System.Web.WebPages.Deployment.dll
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\ShippingPlatform.DataBase.pdb
-H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\ShippingPlatform.Test.pdb
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\ShippingPlatform.pdb
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\WebService.pdb
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\Dapper.FluentMap.xml
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\Dapper.xml
-H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\nunit.framework.xml
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\System.Web.Http.xml
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\System.Web.Mvc.xml
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\System.Net.Http.Formatting.xml
@@ -56,4 +52,7 @@ H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\System.Web.Razor.xml
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\System.Web.WebPages.Razor.xml
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\System.Web.WebPages.xml
 H:\ShippingPlatform\ShippingPlatform.Manager\bin\Debug\System.Web.WebPages.Deployment.xml
-H:\ShippingPlatform\ShippingPlatform.Manager\obj\Debug\GeneratedInternalTypeHelper.g.cs
+H:\ShippingPlatform\ShippingPlatform.Manager\obj\Debug\MainPlatformWindow.g.cs
+H:\ShippingPlatform\ShippingPlatform.Manager\obj\Debug\MainPlatformWindow.baml
+H:\ShippingPlatform\ShippingPlatform.Manager\obj\Debug\RegisterWindow.g.cs
+H:\ShippingPlatform\ShippingPlatform.Manager\obj\Debug\RegisterWindow.baml
