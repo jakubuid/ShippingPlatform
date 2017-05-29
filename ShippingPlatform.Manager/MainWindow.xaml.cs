@@ -56,6 +56,7 @@ namespace ShippingPlatform.Manager
 
                 if (count == 1)
                 {
+                    dbConnection.Close();
                     MainPlatformWindow platformWindow = new MainPlatformWindow();
                     this.Close();
                     platformWindow.ShowDialog();

@@ -50,11 +50,14 @@ namespace ShippingPlatform.Manager
                 else
                 {
                     dbConnection.Open();
+
                     string insertNewUser = @"INSERT INTO 
-                    clients(id_client_address, id_order, login, password, address_email)
-                    VALUES(10, 1, '" + this.loginBox.Text + "', '" + this.pwdBox.Password + "', '" + this.emailBox.Text + "');";
+                                            clients(id_client_address, id_order, login, password, address_email)
+                                            VALUES(10, 1, '" + this.loginBox.Text + "', '" + this.pwdBox.Password + "', '" + this.emailBox.Text + "');";
+
                     MySqlCommand createClientCommand = new MySqlCommand(insertNewUser, dbConnection);
                     createClientCommand.ExecuteNonQuery();
+                    dbConnection.Close();
 
                     MainPlatformWindow mainWindow = new MainPlatformWindow();
                     this.Close();
