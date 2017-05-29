@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,13 +24,38 @@ namespace ShippingPlatform.Manager
     public partial class MainPlatformWindow : Window
     {
         #region MySqlConnection Connection
-
         public MySqlConnection dbConnection = new MySqlConnection(ConnectionProvider.GetConnectionString());
 
         public MainPlatformWindow()
         {
             InitializeComponent();
+            fillCombo();
         }
+
+        private void fillCombo()
+        {
+            try
+            {
+                dbConnection.Open();
+                string selectPackages = @"SELECT *
+                                FROM packages;";
+
+                MySqlCommand createCommand = new MySqlCommand(selectPackages, dbConnection);
+                MySqlDataReader dataReader = createCommand.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    string content = dataReader.GetString(5);
+                    comboBox.Items.Add(content);
+                }
+                dbConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -99,6 +126,72 @@ namespace ShippingPlatform.Manager
             {
                 MessageBox.Show(ex.Message);
                 dbConnection.Close();
+            }
+        }
+
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+           
+        }
+
+        private void comboBox_DropDownClosed(object sender, EventArgs e)
+        {
+            try
+            {
+                dbConnection.Open();
+                string selectPackages = @"SELECT *
+                                        FROM packages
+                                        WHERE content = '" + this.comboBox.Text + "';";
+
+                MySqlCommand createCommand = new MySqlCommand(selectPackages, dbConnection);
+                MySqlDataReader dataReader = createCommand.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    string packageId = dataReader.GetInt32(0).ToString();
+                    string height = dataReader.GetDouble(1).ToString();
+                    string width = dataReader.GetDouble(2).ToString();
+                    string depth = dataReader.GetDouble(3).ToString();
+                    string weight = dataReader.GetDouble(4).ToString();
+                    string content = dataReader.GetString(5);
+
+                    this.idBox.Text = packageId;
+                    this.heightBox.Text = height;
+                    this.contentBox.Text = content;
+                    this.depthBox.Text = depth;
+                    this.weightBox.Text = weight;
+                    this.widthBox.Text = width;
+                }
+                dbConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                dbConnection.Close();
+            }
+        }
+
+        private void loadDataButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                dbConnection.Open();
+                string selectPackages = @"SELECT id_packages, height, width, depth, weight, content
+                                        FROM packages;";
+
+                MySqlCommand createCommand = new MySqlCommand(selectPackages, dbConnection);
+                createCommand.ExecuteNonQuery();
+                
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(createCommand);
+                DataTable dataTable = new DataTable("packages");
+                dataAdapter.Fill(dataTable);
+                dataGrid.ItemsSource = dataTable.DefaultView;
+                dataAdapter.Update(dataTable);
+                dbConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

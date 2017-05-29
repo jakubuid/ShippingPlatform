@@ -5,26 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShippingPlatform.Manager"
         mc:Ignorable="d"
-        Title="MainPlatformWindow" Height="477.722" Width="673.26">
+        Title="MainPlatformWindow" Height="419.222" Width="673.26">
     <Grid>
-        <TabControl Margin="1,-3,-1,3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="512*"/>
+            <ColumnDefinition Width="153*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl Margin="1,-3,-1,3" Grid.ColumnSpan="2">
             <TabItem Header="Packages">
                 <Grid>
                     <TextBox x:Name="idBox" Height="15" Margin="70,-320,482,0"/>
-                    <Label x:Name="idLabel" Content="Package &#xD;&#xA;id:" Margin="2,25,585,340"/>
+                    <Label x:Name="idLabel" Content="Package &#xD;&#xA;id:" Margin="2,4,585,309"/>
                     <TextBox x:Name="heightBox" Height="15" Margin="70,-235,482,0"/>
-                    <Label x:Name="heightLabel" Content="Height:" Margin="2,77,597,305"/>
+                    <Label x:Name="heightLabel" Content="Height:" Margin="2,49,597,277"/>
                     <TextBox x:Name="widthBox" Height="15" Margin="70,-170,482,0"/>
-                    <Label x:Name="widthLabel" Content="Width:" HorizontalAlignment="Left" Margin="5,111,0,0" VerticalAlignment="Top" Width="50" Height="26"/>
+                    <Label x:Name="widthLabel" Content="Width:" HorizontalAlignment="Left" Margin="5,81,0,0" VerticalAlignment="Top" Width="50" Height="24"/>
                     <TextBox x:Name="depthBox" Height="15" Margin="70,-120,482,0"/>
-                    <Label x:Name="depthLabel" Content="Depth:" HorizontalAlignment="Left" Margin="5,135,0,0" VerticalAlignment="Top" Width="50" Height="27"/>
+                    <Label x:Name="depthLabel" Content="Depth:" HorizontalAlignment="Left" Margin="5,106,0,0" VerticalAlignment="Top" Width="50" Height="24"/>
                     <TextBox x:Name="weightBox" Height="15" Margin="70,-70,482,0"/>
-                    <Label x:Name="weightLabel" Content="Weight:" HorizontalAlignment="Left" Margin="5,160,0,0" VerticalAlignment="Top" Width="50" Height="27"/>
+                    <Label x:Name="weightLabel" Content="Weight:" HorizontalAlignment="Left" Margin="5,130,0,0" VerticalAlignment="Top" Width="50" Height="27"/>
                     <TextBox x:Name="contentBox" Height="30" Margin="70,0,482,0"/>
-                    <Label x:Name="contentLabel" Content="Content:" HorizontalAlignment="Left" Margin="4,189,0,0" VerticalAlignment="Top" Width="56" Height="23"/>
-                    <Button x:Name="addButton" Content="Add" HorizontalAlignment="Left" Margin="60,250,0,0" VerticalAlignment="Top" Width="70" Height="15" FontWeight="Bold" FontSize="10" Click="Button_Click"/>
-                    <Button x:Name="editButton" Content="Edit" HorizontalAlignment="Left" Margin="60,275,0,0" VerticalAlignment="Top" Width="70" Height="15" FontWeight="Bold" FontSize="10" Click="editButton_Click"/>
-                    <Button x:Name="deleteButton" Content="Delete" HorizontalAlignment="Left" Margin="60,300,0,0" VerticalAlignment="Top" Width="70" Height="15" FontWeight="Bold" FontSize="10" Click="deleteButton_Click"/>
+                    <Label x:Name="contentLabel" Content="Content:" HorizontalAlignment="Left" Margin="4,168,0,0" VerticalAlignment="Top" Width="56" Height="29"/>
+                    <Button x:Name="addButton" Content="Add" HorizontalAlignment="Left" Margin="60,230,0,0" VerticalAlignment="Top" Width="70" Height="15" FontWeight="Bold" FontSize="10" Click="Button_Click"/>
+                    <Button x:Name="editButton" Content="Edit" HorizontalAlignment="Left" Margin="60,255,0,0" VerticalAlignment="Top" Width="70" Height="15" FontWeight="Bold" FontSize="10" Click="editButton_Click"/>
+                    <Button x:Name="deleteButton" Content="Delete" HorizontalAlignment="Left" Margin="60,280,0,0" VerticalAlignment="Top" Width="70" Height="15" FontWeight="Bold" FontSize="10" Click="deleteButton_Click"/>
+                    <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="250,35,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_SelectionChanged" DropDownClosed="comboBox_DropDownClosed"/>
+                    <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" HorizontalAlignment="Left" Margin="250,95,0,0" VerticalAlignment="Top" Height="221" Width="356"/>
+                    <Button x:Name="loadDataButton" Content="Load data" HorizontalAlignment="Left" Margin="398,34,0,0" VerticalAlignment="Top" Width="105" Height="24" Click="loadDataButton_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Addresses" />
