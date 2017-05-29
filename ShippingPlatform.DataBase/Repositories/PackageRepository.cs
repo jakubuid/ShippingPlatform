@@ -40,5 +40,32 @@ namespace ShippingPlatform.DataBase.Repositories
                     return packages;
                 }, splitOn: "id_orders, id_addresses, id_addresses").ToList();
         }
+
+        public void DeletePackage(IDbConnection connection, int searchId)
+        {
+            connection.Query<Package>
+            (
+                "DELETE FROM packages WHERE id_packages = @id",
+                new {id = searchId});
+        }
+
+        public IEnumerable<Package> AddPackage(IDbConnection connection, double newHeight, double newWidth,
+            double newDepth, double newWeight, string newContent, int newOrderId)
+        {
+            return connection.Query<Package>
+            (
+                @"INSERT INTO 
+                packages(height, width, depth, weight, content, id_order)
+                VALUES(@height, @width, @depth, @weight, @content, @id_order);",
+                new
+                {
+                    height = newHeight,
+                    width = newWidth,
+                    depth = newDepth,
+                    weight = newWeight,
+                    content = newContent,
+                    id_order = newOrderId
+                });
+        }
     }
 }

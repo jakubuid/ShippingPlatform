@@ -34,8 +34,44 @@
                     <Button x:Name="loadDataButton" Content="Load data" HorizontalAlignment="Left" Margin="398,34,0,0" VerticalAlignment="Top" Width="105" Height="24" Click="loadDataButton_Click"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Addresses" />
-            <TabItem Header="Clients" />
+            <TabItem Header="Addresses">
+                <Grid>
+                    <TextBox x:Name="idAddressBox" Height="15" Margin="70,-300,482,0"/>
+                    <Label x:Name="idAddressLabel" Content="Address &#xA;id:" Margin="2,4,585,309"/>
+                    <TextBox x:Name="countryAddressBox" Height="15" Margin="70,-235,482,0"/>
+                    <Label x:Name="heightAddressLabel" Content="Country:" Margin="2,49,597,277"/>
+                    <TextBox x:Name="cityAddressBox" Height="15" Margin="70,-170,482,0"/>
+                    <Label x:Name="widthAddressLabel" Content="City:" HorizontalAlignment="Left" Margin="5,81,0,0" VerticalAlignment="Top" Width="50" Height="24"/>
+                    <TextBox x:Name="zipcodeAddressBox" Height="15" Margin="70,-120,482,0"/>
+                    <Label x:Name="depthAddressLabel" Content="Zipcode:" HorizontalAlignment="Left" Margin="5,106,0,0" VerticalAlignment="Top" Width="56" Height="24"/>
+                    <TextBox x:Name="houseNumberAddressBox" Height="15" Margin="70,-45,482,0"/>
+                    <Label x:Name="weightAddressLabel" Content="House&#xD;&#xA;number:" HorizontalAlignment="Left" Margin="5,130,0,0" VerticalAlignment="Top" Width="60" Height="44"/>
+                    <Button x:Name="addAddressButton" Content="Add" HorizontalAlignment="Left" Margin="60,230,0,0" VerticalAlignment="Top" Width="70" Height="15" FontWeight="Bold" FontSize="10" Click="addAddresButton_Click"/>
+                    <Button x:Name="editAddressButton" Content="Edit" HorizontalAlignment="Left" Margin="60,255,0,0" VerticalAlignment="Top" Width="70" Height="15" FontWeight="Bold" FontSize="10" Click="editAddressButton_Click"/>
+                    <Button x:Name="deleteAddressButton" Content="Delete" HorizontalAlignment="Left" Margin="60,280,0,0" VerticalAlignment="Top" Width="70" Height="15" FontWeight="Bold" FontSize="10" Click="deleteAddressButton_Click"/>
+                    <ComboBox x:Name="comboAddressBox" HorizontalAlignment="Left" Margin="250,35,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_SelectionChanged" DropDownClosed="addressComboBox_DropDownClosed"/>
+                    <DataGrid x:Name="dataAddressGrid" AutoGenerateColumns="True" HorizontalAlignment="Left" Margin="250,95,0,0" VerticalAlignment="Top" Height="221" Width="356"/>
+                    <Button x:Name="loadDataAddressButton" Content="Load data" HorizontalAlignment="Left" Margin="398,34,0,0" VerticalAlignment="Top" Width="105" Height="24" Click="loadAddressDataButton_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Clients">
+                <Grid>
+                    <TextBox x:Name="idClientBox" Height="15" Margin="70,-300,482,0"/>
+                    <Label x:Name="idClientLabel" Content="Client&#xA;id:" Margin="2,4,585,309"/>
+                    <TextBox x:Name="loginClientBox" Height="15" Margin="70,-235,482,0"/>
+                    <Label x:Name="loginClientLabel" Content="Login:" Margin="2,49,597,277"/>
+                    <TextBox x:Name="pwdClientBox" Height="15" Margin="70,-170,482,0"/>
+                    <Label x:Name="pwdClientLabel" Content="Password:" HorizontalAlignment="Left" Margin="0,81,0,0" VerticalAlignment="Top" Width="66" Height="24"/>
+                    <TextBox x:Name="emailClientBox" Height="15" Margin="70,-115,482,0"/>
+                    <Label x:Name="emailClientLabel" Content="Email:" HorizontalAlignment="Left" Margin="5,110,0,0" VerticalAlignment="Top" Width="56" Height="24"/>
+                    <Button x:Name="addClientButton" Content="Add" HorizontalAlignment="Left" Margin="60,165,0,0" VerticalAlignment="Top" Width="70" Height="15" FontWeight="Bold" FontSize="10" Click="addClientButton_Click"/>
+                    <Button x:Name="editClientButton" Content="Edit" HorizontalAlignment="Left" Margin="60,190,0,0" VerticalAlignment="Top" Width="70" Height="15" FontWeight="Bold" FontSize="10" Click="editClientButton_Click"/>
+                    <Button x:Name="deleteClientButton" Content="Delete" HorizontalAlignment="Left" Margin="60,215,0,0" VerticalAlignment="Top" Width="70" Height="15" FontWeight="Bold" FontSize="10" Click="deleteClientButton_Click"/>
+                    <ComboBox x:Name="comboClientBox" HorizontalAlignment="Left" Margin="250,35,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_SelectionChanged" DropDownClosed="clientComboBox_DropDownClosed"/>
+                    <DataGrid x:Name="dataClientGrid" AutoGenerateColumns="True" HorizontalAlignment="Left" Margin="250,95,0,0" VerticalAlignment="Top" Height="221" Width="356"/>
+                    <Button x:Name="loadDataClientButton" Content="Load data" HorizontalAlignment="Left" Margin="398,34,0,0" VerticalAlignment="Top" Width="105" Height="24" Click="loadClientDataButton_Click"/>
+                </Grid>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>

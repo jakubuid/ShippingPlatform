@@ -18,7 +18,7 @@ namespace ShippingPlatform.DataBase.Services
             return addressRepository.GetAllAddresses(connection);
         }
 
-        public IEnumerable<Client> AddAddress(IDbConnection connection, Address address)
+        public IEnumerable<Address> AddAddress(IDbConnection connection, Address address)
         {
             return addressRepository.AddAddress(connection, address.country, address.city, address.zipcode,
                 address.houseNumber);
@@ -27,6 +27,11 @@ namespace ShippingPlatform.DataBase.Services
         public Address UpdateAddress(IDbConnection connection, Address address, int id)
         {
            return addressRepository.UpdateAddress(connection, address, id);
+        }
+
+        public void DeleteAddress(IDbConnection connection, int searchId)
+        {
+            addressRepository.DeleteAddress(connection, searchId);
         }
     }
 }

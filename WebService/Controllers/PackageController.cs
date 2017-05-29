@@ -39,5 +39,33 @@ namespace WebService.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpDelete]
+        public IHttpActionResult Delete([FromUri] int id)
+        {
+            try
+            {
+                new PackageService().DeletePackage(ConnectionProvider.GetConnection(), id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost]
+        public IHttpActionResult Post([FromBody] Package package)
+        {
+            try
+            {
+                new PackageService().AddPackage(ConnectionProvider.GetConnection(), package);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

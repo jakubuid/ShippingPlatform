@@ -69,5 +69,19 @@ namespace WebService.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpDelete]
+        public IHttpActionResult Delete([FromUri] int id)
+        {
+            try
+            {
+                new AddressService().DeleteAddress(ConnectionProvider.GetConnection(), id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

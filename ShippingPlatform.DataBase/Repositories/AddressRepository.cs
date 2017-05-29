@@ -19,10 +19,10 @@ namespace ShippingPlatform.DataBase.Repositories
             return connection.Query<Address>("SELECT * FROM addresses").ToList();
         }
 
-        public IEnumerable<Client> AddAddress(IDbConnection connection, string newCountry, string newCity,
+        public IEnumerable<Address> AddAddress(IDbConnection connection, string newCountry, string newCity,
             string newZipcode, int newHousenumber)
         {
-            return connection.Query<Client>
+            return connection.Query<Address>
             (
                 @"INSERT INTO 
                 addresses(country, city, zipcode, house_number)
@@ -34,6 +34,14 @@ namespace ShippingPlatform.DataBase.Repositories
                     zipcode = newZipcode,
                     house_number = newHousenumber,
                 });
+        }
+
+        public void DeleteAddress(IDbConnection connection, int searchId)
+        {
+            connection.Query<Address>
+            (
+                "DELETE FROM addresses WHERE id_addresses = @id",
+                new { id = searchId });
         }
 
         public Address UpdateAddress(IDbConnection connection, Address address, int addressId)

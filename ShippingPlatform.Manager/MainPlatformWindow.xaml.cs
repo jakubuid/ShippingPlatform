@@ -24,12 +24,15 @@ namespace ShippingPlatform.Manager
     public partial class MainPlatformWindow : Window
     {
         #region MySqlConnection Connection
+
         public MySqlConnection dbConnection = new MySqlConnection(ConnectionProvider.GetConnectionString());
 
         public MainPlatformWindow()
         {
             InitializeComponent();
             fillCombo();
+            fillAddressCombo();
+            fillClientCombo();
         }
 
         private void fillCombo()
@@ -131,7 +134,6 @@ namespace ShippingPlatform.Manager
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-           
         }
 
         private void comboBox_DropDownClosed(object sender, EventArgs e)
@@ -181,11 +183,313 @@ namespace ShippingPlatform.Manager
 
                 MySqlCommand createCommand = new MySqlCommand(selectPackages, dbConnection);
                 createCommand.ExecuteNonQuery();
-                
+
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(createCommand);
                 DataTable dataTable = new DataTable("packages");
                 dataAdapter.Fill(dataTable);
                 dataGrid.ItemsSource = dataTable.DefaultView;
+                dataAdapter.Update(dataTable);
+                dbConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void addAddresButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                dbConnection.Open();
+                string insertAddress = @"INSERT INTO 
+                                        addresses(id_addresses, country, city, zipcode, house_number)
+                                        VALUES('" + this.idAddressBox.Text + "', '" +
+                                       this.countryAddressBox.Text + "', '" +
+                                       this.cityAddressBox.Text + "', '" +
+                                       this.zipcodeAddressBox.Text + "', '" +
+                                       this.houseNumberAddressBox.Text + "');";
+
+                MySqlCommand createCommand = new MySqlCommand(insertAddress, dbConnection);
+                createCommand.ExecuteNonQuery();
+                MessageBox.Show("Added");
+                dbConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                dbConnection.Close();
+            }
+        }
+
+        private void editAddressButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                dbConnection.Open();
+                string updateAddress = @"UPDATE addresses SET
+                                        id_addresses = '" + this.idAddressBox.Text +
+                                       "', country = '" + this.countryAddressBox.Text +
+                                       "', city = '" + this.cityAddressBox.Text +
+                                       "', zipcode = '" + this.zipcodeAddressBox.Text +
+                                       "', house_number = '" + this.houseNumberAddressBox.Text + "'" +
+                                       "WHERE  id_addresses = '" + this.idAddressBox.Text + "';";
+
+                MySqlCommand createCommand = new MySqlCommand(updateAddress, dbConnection);
+                createCommand.ExecuteNonQuery();
+                MessageBox.Show("Edited");
+                dbConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                dbConnection.Close();
+            }
+        }
+
+        private void deleteAddressButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                dbConnection.Open();
+                string deleteAddress = @"DELETE FROM addresses
+                                        WHERE id_addresses = '" + this.idAddressBox.Text + "';";
+
+                MySqlCommand createCommand = new MySqlCommand(deleteAddress, dbConnection);
+                createCommand.ExecuteNonQuery();
+                MessageBox.Show("Deleted");
+                dbConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                dbConnection.Close();
+            }
+        }
+
+        private void loadAddressDataButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                dbConnection.Open();
+                string selectAddresses = @"SELECT id_addresses, country, city, zipcode, house_number
+                                        FROM addresses;";
+
+                MySqlCommand createCommand = new MySqlCommand(selectAddresses, dbConnection);
+                createCommand.ExecuteNonQuery();
+
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(createCommand);
+                DataTable dataTable = new DataTable("addresses");
+                dataAdapter.Fill(dataTable);
+                dataAddressGrid.ItemsSource = dataTable.DefaultView;
+                dataAdapter.Update(dataTable);
+                dbConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void addressComboBox_DropDownClosed(object sender, EventArgs e)
+        {
+            try
+            {
+                dbConnection.Open();
+                string selectAddresses = @"SELECT *
+                                        FROM addresses
+                                        WHERE country = '" + this.comboAddressBox.Text + "';";
+
+                MySqlCommand createCommand = new MySqlCommand(selectAddresses, dbConnection);
+                MySqlDataReader dataReader = createCommand.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    string addressId = dataReader.GetInt32(0).ToString();
+                    string country = dataReader.GetString(1);
+                    string city = dataReader.GetString(2);
+                    string zipcode = dataReader.GetString(3);
+                    string houseNumber = dataReader.GetInt32(4).ToString();
+
+                    this.idAddressBox.Text = addressId;
+                    this.countryAddressBox.Text = country;
+                    this.cityAddressBox.Text = city;
+                    this.zipcodeAddressBox.Text = zipcode;
+                    this.houseNumberAddressBox.Text = houseNumber;
+                }
+                dbConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                dbConnection.Close();
+            }
+        }
+
+        private void fillAddressCombo()
+        {
+            try
+            {
+                dbConnection.Open();
+                string selectAddresses = @"SELECT *
+                                        FROM addresses;";
+
+                MySqlCommand createCommand = new MySqlCommand(selectAddresses, dbConnection);
+                MySqlDataReader dataReader = createCommand.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    string country = dataReader.GetString(1);
+                    comboAddressBox.Items.Add(country);
+                }
+                dbConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void clientComboBox_DropDownClosed(object sender, EventArgs e)
+        {
+            try
+            {
+                dbConnection.Open();
+                string selectClients = @"SELECT *
+                                        FROM clients
+                                        WHERE login = '" + this.comboClientBox.Text + "';";
+
+                MySqlCommand createCommand = new MySqlCommand(selectClients, dbConnection);
+                MySqlDataReader dataReader = createCommand.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    string clientId = dataReader.GetInt32(0).ToString();
+                    string login = dataReader.GetString(3);
+                    string password = dataReader.GetString(4);
+                    string email = dataReader.GetString(5);
+
+                    this.idClientBox.Text = clientId;
+                    this.loginClientBox.Text = login;
+                    this.pwdClientBox.Text = password;
+                    this.emailClientBox.Text = email;
+                }
+                dbConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                dbConnection.Close();
+            }
+        }
+
+        private void deleteClientButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                dbConnection.Open();
+                string deleteClient = @"DELETE FROM clients
+                                        WHERE id_clients = '" + this.idClientBox.Text + "';";
+
+                MySqlCommand createCommand = new MySqlCommand(deleteClient, dbConnection);
+                createCommand.ExecuteNonQuery();
+                MessageBox.Show("Deleted");
+                dbConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                dbConnection.Close();
+            }
+        }
+
+        private void editClientButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                dbConnection.Open();
+                string updateClient = @"UPDATE clients SET
+                                        id_clients = '" + this.idClientBox.Text +
+                                       "', login = '" + this.loginClientBox.Text +
+                                       "', password = '" + this.pwdClientBox.Text +
+                                       "', address_email = '" + this.emailClientBox.Text + "'" +
+                                       "WHERE  id_clients = '" + this.idClientBox.Text + "';";
+
+                MySqlCommand createCommand = new MySqlCommand(updateClient, dbConnection);
+                createCommand.ExecuteNonQuery();
+                MessageBox.Show("Edited");
+                dbConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                dbConnection.Close();
+            }
+        }
+
+        private void addClientButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                dbConnection.Open();
+                string insertClient = @"INSERT INTO 
+                                        clients(id_clients, login, password, address_email)
+                                        VALUES('" + this.idClientBox.Text + "', '" +
+                                       this.loginClientBox.Text + "', '" +
+                                       this.pwdClientBox.Text + "', '" +
+                                       this.emailClientBox.Text + "');";
+
+                MySqlCommand createCommand = new MySqlCommand(insertClient, dbConnection);
+                createCommand.ExecuteNonQuery();
+                MessageBox.Show("Added");
+                dbConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                dbConnection.Close();
+            }
+        }
+
+        private void fillClientCombo()
+        {
+            try
+            {
+                dbConnection.Open();
+                string selectClients = @"SELECT *
+                                        FROM clients;";
+
+                MySqlCommand createCommand = new MySqlCommand(selectClients, dbConnection);
+                MySqlDataReader dataReader = createCommand.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    string login = dataReader.GetString(3);
+                    comboClientBox.Items.Add(login);
+                }
+                dbConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void loadClientDataButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                dbConnection.Open();
+                string selectClients = @"SELECT id_clients, login, password, address_email
+                                        FROM clients;";
+
+                MySqlCommand createCommand = new MySqlCommand(selectClients, dbConnection);
+                createCommand.ExecuteNonQuery();
+
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(createCommand);
+                DataTable dataTable = new DataTable("clients");
+                dataAdapter.Fill(dataTable);
+                dataClientGrid.ItemsSource = dataTable.DefaultView;
                 dataAdapter.Update(dataTable);
                 dbConnection.Close();
             }
