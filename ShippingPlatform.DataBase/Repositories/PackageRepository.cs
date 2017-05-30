@@ -67,5 +67,29 @@ namespace ShippingPlatform.DataBase.Repositories
                     id_order = newOrderId
                 });
         }
+
+        public Package UpdatePackage(IDbConnection connection, Package package, int packageId)
+        {
+            return
+                connection.Query<Package>(
+                    @"UPDATE packages SET
+                height = @height,
+                width = @width,
+                depth = @depth,
+                weight = @weight,
+                content = @content,
+                id_order = @id_order
+                WHERE id_packages = @id;",
+                    new
+                    {
+                        id = packageId,
+                        height = package.height,
+                        width = package.width,
+                        depth = package.depth,
+                        weight = package.weight,
+                        content = package.content,
+                        id_order = package.orderId
+                    }).FirstOrDefault();
+        }
     }
 }

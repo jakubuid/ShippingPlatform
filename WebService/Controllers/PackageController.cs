@@ -67,5 +67,20 @@ namespace WebService.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        //update
+        [HttpPut]
+        public IHttpActionResult Put([FromBody] Package package, int id)
+        {
+            try
+            {
+                new PackageService().UpdatePackage(ConnectionProvider.GetConnection(), package, id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

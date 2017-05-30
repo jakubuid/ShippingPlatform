@@ -28,5 +28,10 @@ namespace ShippingPlatform.DataBase.Services
             return packageRepository.AddPackage(connection, package.height, package.width, package.depth,
                 package.weight, package.content, package.orderId);
         }
+
+        public Package UpdatePackage(IDbConnection connection, Package package, int id)
+        {
+            return packageRepository.UpdatePackage(connection, package, id);
+        }
     }
 }

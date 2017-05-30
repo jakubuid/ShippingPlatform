@@ -46,6 +46,8 @@ namespace ShippingPlatform.Manager
                 MySqlCommand createCommand = new MySqlCommand(selectPackages, dbConnection);
                 MySqlDataReader dataReader = createCommand.ExecuteReader();
 
+                comboBox.Items.Clear();
+
                 while (dataReader.Read())
                 {
                     string content = dataReader.GetString(5);
@@ -175,6 +177,7 @@ namespace ShippingPlatform.Manager
 
         private void loadDataButton_Click(object sender, RoutedEventArgs e)
         {
+            fillCombo();
             try
             {
                 dbConnection.Open();
@@ -269,6 +272,7 @@ namespace ShippingPlatform.Manager
 
         private void loadAddressDataButton_Click(object sender, RoutedEventArgs e)
         {
+            fillAddressCombo();
             try
             {
                 dbConnection.Open();
@@ -336,6 +340,8 @@ namespace ShippingPlatform.Manager
 
                 MySqlCommand createCommand = new MySqlCommand(selectAddresses, dbConnection);
                 MySqlDataReader dataReader = createCommand.ExecuteReader();
+
+                comboAddressBox.Items.Clear();
 
                 while (dataReader.Read())
                 {
@@ -410,10 +416,10 @@ namespace ShippingPlatform.Manager
                 dbConnection.Open();
                 string updateClient = @"UPDATE clients SET
                                         id_clients = '" + this.idClientBox.Text +
-                                       "', login = '" + this.loginClientBox.Text +
-                                       "', password = '" + this.pwdClientBox.Text +
-                                       "', address_email = '" + this.emailClientBox.Text + "'" +
-                                       "WHERE  id_clients = '" + this.idClientBox.Text + "';";
+                                      "', login = '" + this.loginClientBox.Text +
+                                      "', password = '" + this.pwdClientBox.Text +
+                                      "', address_email = '" + this.emailClientBox.Text + "'" +
+                                      "WHERE  id_clients = '" + this.idClientBox.Text + "';";
 
                 MySqlCommand createCommand = new MySqlCommand(updateClient, dbConnection);
                 createCommand.ExecuteNonQuery();
@@ -433,11 +439,11 @@ namespace ShippingPlatform.Manager
             {
                 dbConnection.Open();
                 string insertClient = @"INSERT INTO 
-                                        clients(id_clients, login, password, address_email)
-                                        VALUES('" + this.idClientBox.Text + "', '" +
-                                       this.loginClientBox.Text + "', '" +
-                                       this.pwdClientBox.Text + "', '" +
-                                       this.emailClientBox.Text + "');";
+                                        clients(id_clients, id_client_address, id_order, login, password, address_email)
+                                        VALUES('" + this.idClientBox.Text + "', 11 , 1 , '" +
+                                      this.loginClientBox.Text + "', '" +
+                                      this.pwdClientBox.Text + "', '" +
+                                      this.emailClientBox.Text + "');";
 
                 MySqlCommand createCommand = new MySqlCommand(insertClient, dbConnection);
                 createCommand.ExecuteNonQuery();
@@ -462,6 +468,8 @@ namespace ShippingPlatform.Manager
                 MySqlCommand createCommand = new MySqlCommand(selectClients, dbConnection);
                 MySqlDataReader dataReader = createCommand.ExecuteReader();
 
+                comboClientBox.Items.Clear();
+
                 while (dataReader.Read())
                 {
                     string login = dataReader.GetString(3);
@@ -477,6 +485,7 @@ namespace ShippingPlatform.Manager
 
         private void loadClientDataButton_Click(object sender, RoutedEventArgs e)
         {
+            fillClientCombo();
             try
             {
                 dbConnection.Open();
