@@ -1,9 +1,5 @@
-﻿using Dapper;
-using MySql.Data.MySqlClient;
-using System.Collections.Generic;
+﻿using MySql.Data.MySqlClient;
 using System.Data;
-using System.Linq;
-using static Dapper.SqlMapper;
 
 namespace ShippingPlatform.DataBase
 {
@@ -18,6 +14,7 @@ namespace ShippingPlatform.DataBase
             builder.UserID = "root";
             return builder.GetConnectionString(true);
         }
+
         public static IDbConnection GetConnection()
         {
             IDbConnection connection = new MySqlConnection(GetConnectionString());

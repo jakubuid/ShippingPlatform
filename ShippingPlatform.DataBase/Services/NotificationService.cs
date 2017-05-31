@@ -7,6 +7,7 @@ namespace ShippingPlatform.DataBase.Services
     public class NotificationService
     {
         private NotificationRepository notificationRepo = new NotificationRepository();
+
         public Notification FindOneNotification(IDbConnection connection, int searchId)
         {
             return notificationRepo.GetNotification(connection, searchId);

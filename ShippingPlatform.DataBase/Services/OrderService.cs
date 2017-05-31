@@ -7,6 +7,7 @@ namespace ShippingPlatform.DataBase.Services
     public class OrderService
     {
         private OrderRepository orderRepository = new OrderRepository();
+
         public Order FindOneOrder(IDbConnection connection, int searchId)
         {
             return orderRepository.GetOrder(connection, searchId);

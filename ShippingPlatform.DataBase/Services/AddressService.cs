@@ -26,7 +26,7 @@ namespace ShippingPlatform.DataBase.Services
 
         public Address UpdateAddress(IDbConnection connection, Address address, int id)
         {
-           return addressRepository.UpdateAddress(connection, address, id);
+            return addressRepository.UpdateAddress(connection, address, id);
         }
 
         public void DeleteAddress(IDbConnection connection, int searchId)

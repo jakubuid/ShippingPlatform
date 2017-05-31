@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Dapper.FluentMap;
+﻿using Dapper.FluentMap;
 using ShippingPlatform.DataBase.Mappers;
 
 namespace ShippingPlatform.DataBase
@@ -16,7 +11,7 @@ namespace ShippingPlatform.DataBase
         {
             if (isConfigured)
             {
-                return; 
+                return;
             }
             FluentMapper.Initialize(config =>
             {

@@ -25,7 +25,8 @@ namespace ShippingPlatform.DataBase.Services
 
         public IEnumerable<Client> AddClient(IDbConnection connection, Client client)
         {
-            return clientRepository.AddClient(connection, client.clientAddressId, client.orderId, client.login, client.password, client.addressEmail);
+            return clientRepository.AddClient(connection, client.clientAddressId, client.orderId, client.login,
+                client.password, client.addressEmail);
         }
 
         public Client UpdateClient(IDbConnection connection, Client client, int id)

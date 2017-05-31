@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
 using ShippingPlatform.DataBase;
 
@@ -53,7 +41,8 @@ namespace ShippingPlatform.Manager
 
                     string insertNewUser = @"INSERT INTO 
                                             clients(id_client_address, id_order, login, password, address_email)
-                                            VALUES(10, 1, '" + this.loginBox.Text + "', '" + this.pwdBox.Password + "', '" + this.emailBox.Text + "');";
+                                            VALUES(10, 1, '" + this.loginBox.Text + "', '" + this.pwdBox.Password +
+                                           "', '" + this.emailBox.Text + "');";
 
                     MySqlCommand createClientCommand = new MySqlCommand(insertNewUser, dbConnection);
                     createClientCommand.ExecuteNonQuery();

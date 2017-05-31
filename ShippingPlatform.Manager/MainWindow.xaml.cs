@@ -1,25 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
 using ShippingPlatform.DataBase;
-using ShippingPlatform.DataBase.Repositories;
-using ShippingPlatform.DataBase.Services;
 
 namespace ShippingPlatform.Manager
 {
@@ -32,7 +14,6 @@ namespace ShippingPlatform.Manager
         public MainWindow()
         {
             InitializeComponent();
-            //DataContext = new ClientsViewModel(); 
         }
 
         private void loginButton_Click(object sender, RoutedEventArgs e)

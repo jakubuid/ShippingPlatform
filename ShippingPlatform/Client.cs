@@ -2,7 +2,7 @@
 
 namespace ShippingPlatform
 {
-     public class Client
+    public class Client
     {
         public int id { get; set; }
         public Address clientAddress { get; set; }
@@ -10,7 +10,7 @@ namespace ShippingPlatform
         public Order order { get; set; }
         public int orderId { get; set; }
         public String login { get; set; }
-        public String  password{ get; set; }
+        public String password { get; set; }
         public String addressEmail { get; set; }
     }
 }
